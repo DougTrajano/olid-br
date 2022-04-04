@@ -1,0 +1,21 @@
+name: Publish docs
+
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  build:
+    name: Deploy docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v2
+
+      - name: Deploy docs
+        uses: afritzler/mkdocs-gh-pages-action@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONFIG_FILE: mkdocs.yml
+          REQUIREMENTS: requirements-docs.txt

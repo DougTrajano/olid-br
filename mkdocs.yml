@@ -1,0 +1,128 @@
+# Project information
+site_name: OLID-BR
+site_description: Offensive Language Identification Dataset for Brazilian Portuguese
+site_url: https://github.com/DougTrajano/olid-br
+site_author: Douglas Trajano
+
+# Repository
+repo_name: olid-br
+repo_url: https://github.com/DougTrajano/olid-br
+edit_uri: ""
+
+# Other
+use_directory_urls: false
+copyright: Copyright 2021 Douglas Trajano. Licensed under the Apache License, Version 2.0.
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)" # get system preference
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" # get system preference
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - navigation.sections
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.integrate
+
+nav:
+  - OLID-BR: index.en.md
+  - OLID-EN: olid-en.en.md
+  - Get Started: get-started.en.md
+  - Annotation: annotation.en.md
+  - Data Pipeline: data-pipeline.en.md
+  - Metadata: metadata.en.md
+  - Glossary: glossary.en.md
+
+plugins:
+  - tooltips
+  - search
+  - section-index
+  - i18n:
+      default_language: en
+      languages:
+        en: english
+        pt: portuguese
+      material_alternate: false
+  - git-revision-date-localized
+  - exclude:
+      glob:
+        - diagrams/*
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/douglas-trajano
+      name: Douglas Trajano - LinkedIn
+    - icon: fontawesome/brands/medium
+      link: https://dougtrajano.medium.com/
+      name: Douglas Trajano - Medium
+    - icon: fontawesome/brands/github
+      link: https://github.com/DougTrajano
+      name: DougTrajano - GitHub
+    - icon: fontawesome/brands/kaggle
+      link: https://www.kaggle.com/dougtrajano
+      name: Douglas Trajano - Kaggle
+  alternate:
+    - name: English
+      link: ./en/
+      lang: en
+    - name: Português
+      link: ./pt/
+      lang: pt
+
+extra_css:
+  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.css
+  - stylesheets/extra.css
+  - stylesheets/tooltip.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js
+  - javascripts/tables.js
+  
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: "#"
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.progressbar
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format

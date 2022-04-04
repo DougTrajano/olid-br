@@ -1,0 +1,10 @@
+[data-md-color-scheme="default"] {
+    --md-primary-fg-color:        #0095d9;
+}
+
+
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color:        #0095d9;
+    --md-default-bg-color:        #22272e; /* 22272e
+    --md-hue: 210; /* [0, 360] */
+}
