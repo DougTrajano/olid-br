@@ -11,28 +11,6 @@ See the [Dataset documentation](https://dougtrajano.github.io/olid-br/) for more
 
 The dataset will be available on [Kaggle](https://www.kaggle.com/dougtrajano/olidbr).
 
-The above sample code shows how to use the dataset.
-
-```python
-# Define Kaggle required env vars
-import os
-
-os.environ["KAGGLE_USERNAME"] = "your_username"
-os.environ["KAGGLE_KEY"] = "your_kaggle_key"
-
-# Download the dataset
-from kaggle.api.kaggle_api_extended import KaggleApi
-
-kaggle = KaggleApi()
-kaggle.authenticate()
-
-kaggle.dataset_download_file(
-    dataset="olidbr",
-    file_name="olidbr.csv")
-
-df = pd.read_csv("olidbr.csv")
-```
-
 ## Technical details
 
 ### Running Notebooks
