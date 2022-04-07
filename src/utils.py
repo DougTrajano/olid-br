@@ -97,7 +97,7 @@ def get_toxic_substrings(text: str, spans: List[int], verbose=False) -> List[str
     Returns:
     - A list of words extracted from the text.
     """
-    def format_substring(substring: str):
+    def format_substring(substring: List[str]) -> str:
         return " ".join("".join(substring).split())
 
     delimiter = None
@@ -126,7 +126,7 @@ def get_toxic_substrings(text: str, spans: List[int], verbose=False) -> List[str
     words = [w for w in words if w not in [" ", ""]]
     return words
 
-def normalize_RawText(data: List[RawText]) -> List[Dict[Any, Any]]:
+def normalize_raw_text(data: List[RawText]) -> List[Dict[Any, Any]]:
     """
     Normalize RawText to a list of dictionaries.
 
