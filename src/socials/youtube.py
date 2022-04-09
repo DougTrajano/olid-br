@@ -37,7 +37,7 @@ class YouTubeCrawler(object):
            wait_exponential_multiplier=1000,
            wait_exponential_max=10000,
            stop_max_attempt_number=5)
-    def _yt_comments_call(self, video_id: str, max_results: int):
+    def _yt_comments_call(self, video_id: str, max_results: int, pageToken: str = None):
         """
         Call YouTube API to get comments from a video.
 
@@ -51,6 +51,7 @@ class YouTubeCrawler(object):
         response = self.api.commentThreads().list(
             part="snippet,replies",
             maxResults=max_results,
+            pageToken=pageToken,
             videoId=video_id).execute()
         self.call_counter += 1
         return response
@@ -60,7 +61,7 @@ class YouTubeCrawler(object):
             max_results = 50
             _logger.warning(f"Maximum number of comments is 50. Setting max_results to 50.")
         return max_results
-
+        
     def get_channel_videos(self, channel_id: str, max_results: int = 50):
         """Get videos from a channel
 
@@ -122,12 +123,12 @@ class YouTubeCrawler(object):
         self.videos = None
         return videos
 
-    def get_video_comments(self, video_id: str, max_results: int = 50, max_comments: int = None):
+    def get_video_comments(self, video_id: str, max_results_per_call: int = 50, max_comments: int = None):
         """Get comments and replies from a given video.
 
         Args:
         - video_id: YouTube video id
-        - max_results: maximum number of comments to retrieve (value between 0 and 50).
+        - max_results_per_call: maximum number of comments to retrieve (value between 0 and 50).
 
         Returns:
         - comments: list of comments
@@ -135,10 +136,11 @@ class YouTubeCrawler(object):
         # empty list for storing reply
         self.comments = []
 
-        max_results = self._check_max_results(max_results)
+        max_results_per_call = self._check_max_results(max_results_per_call)
     
         # retrieve youtube video results
-        video_response= self._yt_comments_call(video_id, max_results)
+        video_response= self._yt_comments_call(
+            video_id, max_results_per_call)
     
         # iterate video response
         while video_response:
@@ -175,7 +177,7 @@ class YouTubeCrawler(object):
 
                 print(f"\rCollected {len(self.comments)} comments for video_id: {video_id}", end="")
             
-            if isinstance(max_comments, int) and len(self.comments) >= max_comments:
+            if isinstance(max_comments, (int, float)) and len(self.comments) >= max_comments:
                 print(f"\rCollected {len(self.comments)} comments for video_id: {video_id}")
                 comments = self.comments.copy()
                 self.comments = None
@@ -183,7 +185,9 @@ class YouTubeCrawler(object):
 
             # Again repeat
             if "nextPageToken" in video_response:
-                video_response = self._yt_comments_call(video_id, max_results)
+                video_response = self._yt_comments_call(
+                    video_id, max_results_per_call,
+                    video_response["nextPageToken"])
             else:
                 break
             

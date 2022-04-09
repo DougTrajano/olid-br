@@ -46,7 +46,9 @@ nav:
   - OLID-BR: index.en.md
   - OLID-EN: olid-en.en.md
   - Get Started: get-started.en.md
-  - Annotation: annotation.en.md
+  - Annotation:
+    - Overview: annotation/index.en.md
+    - Guidelines: annotation/guidelines.en.md
   - Data Pipeline: data-pipeline.en.md
   - Metadata: metadata.en.md
   - Glossary: glossary.en.md

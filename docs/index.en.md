@@ -24,7 +24,7 @@ This level is used to detect offensive content in the sentence.
 
 **Is this text offensive?**
 
-We use the [[Perspective API](https://www.perspectiveapi.com/)]{Perspective API is the product of a collaborative research effort by Jigsaw and Google's Counter Abuse Technology team.|top-right} to detect if the sentence contains offensive content with double-check by our [qualified annotators](annotation.md#who-are-qualified-annotators).
+We use the [[Perspective API](https://www.perspectiveapi.com/)]{Perspective API is the product of a collaborative research effort by Jigsaw and Google's Counter Abuse Technology team.|top-right} to detect if the sentence contains offensive content with double-check by our [qualified annotators](annotation/index.en.md#who-are-qualified-annotators).
 
 - `OFF` Offensive: Inappropriate language, insults, or threats.
 - `NOT` Not offensive: No offense or profanity.
@@ -35,7 +35,7 @@ The following labels was tagged by our annotators:
 
 `Health`, `Ideology`, `Insult`, `LGBTQphobia`, `Other-Lifestyle`, `Physical Aspects`, `Profanity/Obscene`, `Racism`, `Religious Intolerance`, `Sexism`, and `Xenophobia`.
 
-See the [Glossary](../glossary.en.md) for detailed explanation.
+See the [Glossary](glossary.en.md) for detailed explanation.
 
 ### Offense target identification
 
