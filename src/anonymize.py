@@ -4,6 +4,7 @@ import spacy
 
 _logger = logging.getLogger()
 
+
 class Anonymizer(object):
     def __init__(self, user_placeholder: str = "USER", url_placeholder: str = "URL",
                  hashtag_placeholder: str = "HASHTAG", spacy_model: str = "pt_core_news_lg"):
@@ -33,7 +34,7 @@ class Anonymizer(object):
         text = self.remove_names(text)
 
         _logger.debug(f"Anonymized text: {text}")
-        
+
         return text
 
     def remove_users(self, text: str) -> str:
@@ -46,7 +47,7 @@ class Anonymizer(object):
         - The anonymized text.
         """
         return re.sub(r'@\w+', self.user_placeholder, text)
-        
+
     def remove_urls(self, text: str) -> str:
         """Regex that removes urls on a given text.
 
@@ -78,9 +79,15 @@ class Anonymizer(object):
         Returns:
         - The anonymized text.
         """
+        placeholders = [
+            self.user_placeholder,
+            self.hashtag_placeholder,
+            self.url_placeholder
+        ]
+
         doc = self.nlp(text)
 
         for token in doc:
-            if token.pos_ == "PROPN" and token._.emoji_desc is None and token.dep_ in ["ROOT", "nsubj", "flat:name", "conj"]:
+            if token.pos_ == "PROPN" and token._.emoji_desc is None and token.dep_ in ["ROOT", "nsubj", "flat:name", "conj"] and token.text not in placeholders:
                 text = text.replace(token.text, self.user_placeholder)
         return text

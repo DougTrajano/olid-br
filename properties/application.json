@@ -1,0 +1,338 @@
+{
+    "twitter": [
+        {
+            "name": "jairbolsonaro",
+            "category": "politics"
+        },
+        {
+            "name": "jdoriajr",
+            "category": "politics"
+        },
+        {
+            "name": "LulaOficial",
+            "category": "politics"
+        },
+        {
+            "name": "Haddad_Fernando",
+            "category": "politics"
+        },
+        {
+            "name": "GuilhermeBoulos",
+            "category": "politics"
+        },
+        {
+            "name": "ManuelaDavila",
+            "category": "politics"
+        },
+        {
+            "name": "ArthurLira_",
+            "category": "politics"
+        },
+        {
+            "name": "PauloGuedesReal",
+            "category": "politics"
+        },
+        {
+            "name": "EduardoLeite_",
+            "category": "politics"
+        },
+        {
+            "name": "cirogomes",
+            "category": "politics"
+        },
+        {
+            "name": "MBLivre",
+            "category": "politics"
+        },
+        {
+            "name": "ThammyReal",
+            "category": "politics"
+        },
+        {
+            "name": "g1",
+            "category": "news"
+        },
+        {
+            "name": "jornalnacional",
+            "category": "news"
+        },
+        {
+            "name": "infomoney",
+            "category": "news"
+        },
+        {
+            "name": "folha",
+            "category": "news"
+        },
+        {
+            "name": "Estadao",
+            "category": "news"
+        },
+        {
+            "name": "majucoutinho",
+            "category": "news"
+        },
+        {
+            "name": "CorreiosBR",
+            "category": "enterprise"
+        },
+        {
+            "name": "havanoficial",
+            "category": "enterprise"
+        },
+        {
+            "name": "GretchenCantora",
+            "category": "artists"
+        },
+        {
+            "name": "Anitta",
+            "category": "artists"
+        },
+        {
+            "name": "NegodoBorel",
+            "category": "artists"
+        },
+        {
+            "name": "luisasonza",
+            "category": "artists"
+        },
+        {
+            "name": "Ludmila",
+            "category": "artists"
+        },
+        {
+            "name": "emicida",
+            "category": "artists"
+        },
+        {
+            "name": "Joelma",
+            "category": "artists"
+        },
+        {
+            "name": "felipeneto",
+            "category": "influencer"
+        },
+        {
+            "name": "neymarjr",
+            "category": "sports"
+        },
+        {
+            "name": "gabigol",
+            "category": "sports"
+        },
+        {
+            "name": "fallen",
+            "category": "sports"
+        },
+        {
+            "name": "Gaules",
+            "category": "sports"
+        },
+        {
+            "name": "richarlison97",
+            "category": "sports"
+        },
+        {
+            "name": "Lorelay_Fox",
+            "category": "influencer"
+        },
+        {
+            "name": "MandyCandy",
+            "category": "influencer"
+        },
+        {
+            "name": "ilharecord",
+            "category": "entertainment"
+        },
+        {
+            "name": "bbb",
+            "category": "entertainment"
+        },
+        {
+            "name": "CamilaDeLucax",
+            "category": "influencer"
+        },
+        {
+            "name": "_pequenalo",
+            "category": "influencer"
+        },
+        {
+            "name": "thaiscarlads",
+            "category": "influencer"
+        },
+        {
+            "name": "Ronaldo",
+            "category": "sports"
+        },
+        {
+            "name": "LumenaAleluia",
+            "category": "influencer"
+        },
+        {
+            "name": "Bradesco",
+            "category": "enterprise"
+        },
+        {
+            "name": "euleodias",
+            "category": "news"
+        },
+        {
+            "name": "pfofocalizando",
+            "category": "news"
+        },
+        {
+            "name": "afazendareconrd",
+            "category": "entertainment"
+        },
+        {
+            "name": "lucianagenro",
+            "category": "politics"
+        },
+        {
+            "name": "gleisi",
+            "category": "politics"
+        },
+        {
+            "name": "dilmabr",
+            "category": "politics"
+        },
+        {
+            "name": "jeanwyllys_real",
+            "category": "politics"
+        },
+        {
+            "name": "BolsonaroSP",
+            "category": "politics"
+        },
+        {
+            "name": "CarlosBolsonaro",
+            "category": "politics"
+        },
+        {
+            "name": "FlavioBolsonaro",
+            "category": "politics"
+        },
+        {
+            "name": "alefrota77",
+            "category": "politics"
+        },
+        {
+            "name": "MBLivre",
+            "category": "politics"
+        },
+        {
+            "name": "PastorMalafaia",
+            "category": "religion"
+        },
+        {
+            "name": "marcofeliciano",
+            "category": "religion"
+        },
+        {
+            "name": "pefabiodemelo",
+            "category": "religion"
+        },
+        {
+            "name": "Castelli_Henri",
+            "category": "artists"
+        },
+        {
+            "name": "realwbonner",
+            "category": "news"
+        },
+        {
+            "name": "STF_oficial",
+            "category": "politics"
+        }
+    ],
+    "youtube": [
+        {
+            "video": "https://www.youtube.com/watch?v=yB_NsC5ZcLo",
+            "category": "news"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=gcZD-FEwQXo",
+            "category": "news"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=016FNgvHSTU",
+            "category": "news"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=TRU4v-iCTDA",
+            "category": "news"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=e3L9403q7GU",
+            "category": "news"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=YpM-NVvNjUE",
+            "category": "politics"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=7PUdcYpt_ZY",
+            "category": "politics"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=MO3bKKEm1b0",
+            "category": "politics"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=0nGSGh-PVZs",
+            "category": "politics"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=AS5PT-vCFts",
+            "category": "politics"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=vKnubjHodrk",
+            "category": "influencer"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=5taqYmap2kk",
+            "category": "influencer"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=3tfzd-D-6w0",
+            "category": "influencer"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=2Lp7XO6oWCM",
+            "category": "influencer"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=-cO2D_ZHzPY",
+            "category": "influencer"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=SDCtgJjnxGQ",
+            "category": "influencer"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=RyV-R1l3erw",
+            "category": "entertainment"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=zgGHIirlBWU",
+            "category": "entertainment"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=FFtCvOy2jZE",
+            "category": "entertainment"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=A_zDek8PcCg",
+            "category": "enterprise"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=p4b8BMnolDI",
+            "category": "enterprise"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=301GMPrHt7M",
+            "category": "enterprise"
+        }
+    ]
+}

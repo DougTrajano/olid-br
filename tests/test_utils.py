@@ -1,7 +1,7 @@
 import json
 import pytest
 import datetime
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Tuple
 from src.data_models import RawText, ProcessedText
 from src.utils import (
     read_yaml,
@@ -57,7 +57,7 @@ TESTS_SUBSTRINGS = [
         sexism=False,
         xenophobia=False
     ), 
-    ["Canalha "]
+    ["Canalha"]
     )
 ]
 
@@ -83,9 +83,15 @@ def test_save_json():
 @pytest.mark.parametrize("value, output", TESTS)
 def test_label_studio_fmt(value: RawText, output: Dict[str, Dict[str, Any]]):
     assert label_studio_fmt(value) == output
-    print(f"TEST OK for src.metadata.label_studio_fmt() - Value: {value} - Output: {output}")
+    print(f"TEST OK for src.utils.label_studio_fmt() - Value: {value} - Output: {output}")
 
 @pytest.mark.parametrize("value, output", TESTS_SUBSTRINGS)
 def test_get_toxic_substrings(value: ProcessedText, output: List[str]):
     assert get_toxic_substrings(value.text, value.toxic_spans) == output
-    print(f"TEST OK for src.metadata.get_toxic_substrings() - Value: {value} - Output: {output}")
+    print(f"TEST OK for src.utils.get_toxic_substrings() - Value: {value} - Output: {output}")
+
+@pytest.mark.parametrize("test_case", TESTS)
+def test_normalize_raw_text(test_case: Tuple[RawText, Dict[str, Dict[str, Any]]]):
+    test = normalize_raw_text([test_case[0]])
+    assert type(test) == list
+    print(f"TEST OK for src.utils.normalize_raw_text() - Value: {test_case[0].dict()}.")
