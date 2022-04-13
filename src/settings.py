@@ -3,7 +3,7 @@ from pydantic import BaseSettings, Field
 class AppSettings(BaseSettings):
     LOG_LEVEL: str = Field("INFO", description="Logging Level")
     PERSPECTIVE_API_KEY: str = Field(None, description="Perspective API Key")
-    PERSPECTIVE_THRESHOLD: float = Field(0.5, description="Perspective toxicity threshold")
+    PERSPECTIVE_THRESHOLD: float = Field(0.7, description="Perspective toxicity threshold")
     FILTER_TOXIC_COMMENTS: bool = Field(True, description="Filter toxic comments")
     TWITTER_CONSUMER_KEY: str = Field(None, description="Twitter Consumer Key")
     TWITTER_CONSUMER_SECRET: str = Field(None, description="Twitter Consumer Secret")
