@@ -1,6 +1,6 @@
 google-api-python-client==2.43.0
 kaggle==1.5.12
-metaflow==2.5.4
+metaflow==2.6.0
 pydantic==1.8.2
 python-dotenv==0.20.0
 PyYAML==6.0
