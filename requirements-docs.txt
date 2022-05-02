@@ -1,4 +1,4 @@
-Jinja2==3.1.1
+Jinja2==3.1.2
 mike==1.1.2
 mkdocs-exclude==1.0.2
 mkdocs-git-revision-date-localized-plugin==1.0.1
