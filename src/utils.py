@@ -1,9 +1,8 @@
-import os
 import json
 import yaml
-import boto3
 import logging
-from src.data_models import RawText
+import pandas as pd
+from src.data_classes import RawText
 from typing import Dict, Any, List, Union
 
 _logger = logging.getLogger(__name__)
@@ -141,5 +140,55 @@ def normalize_raw_text(data: List[RawText]) -> List[Dict[Any, Any]]:
         i = i.dict()
         i["created_at"] = i["created_at"].isoformat()
         i["collected_at"] = i["collected_at"].isoformat()
+        new_data.append(i)
+    return new_data
+
+def check_words(text: str, words: list):
+    """Check if the text only contains words from the list.
+
+    Args:
+    - text: The text to check.
+    - words: The words to check for.
+
+    Returns:
+    - True if the text contains all the words.
+    """
+    for word in words:
+        if word not in text:
+            return False
+    return True
+    
+def prepare_data_to_px(df: pd.DataFrame):
+    """
+    Prepare the data to be used in a plotly graph.
+
+    Args:
+    - data: A pandas dataframe with each column being an annotator and each row being a label.
+
+    Returns:
+    - A pandas dataframe with the following columns: Annotator, Label, Count.
+    """
+    data = []
+
+    for annotator in df.columns:
+        for label, count in df[annotator].value_counts().items():
+            data.append({"Annotator": annotator, "Label": label, "Count": count})
+    return pd.DataFrame(data)
+
+def dict_serialize_date(data, keys):
+    """Serialize keys that are dates in a list of dictionaries to ISO 8601.
+
+    Args:
+    - data: A list of RawText objects.
+    - keys: A list of keys to serialize.
+
+    Returns:
+    - A list of dictionaries.
+    """
+    new_data = []
+    for i in data:
+        for key in keys:
+            if key in i:
+                i[key] = i[key].isoformat()
         new_data.append(i)
     return new_data
