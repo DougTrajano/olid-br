@@ -1,0 +1,26 @@
+- annotator_id: 1
+  gender: male
+  age: 28
+  education_level: Bachelor's Degree
+  annotator_type: Researcher
+- annotator_id: 32
+  gender: female
+  age: 30
+  education_level: Bachelor's Degree
+  annotator_type: Volunteer
+- annotator_id: 127
+  gender: female
+  age: 0
+  education_level: Master's Degree
+  annotator_type: Contract Worker
+- annotator_id: 128
+  gender: female
+  age: 0
+  education_level: Master's Degree
+  annotator_type: Contract Worker
+- annotator_id: 126
+  gender: male
+  age: 0
+  education_level: High School
+  annotator_type: Contract Worker
+  
