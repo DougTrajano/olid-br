@@ -10,4 +10,4 @@ simpletransformers==0.63.6
 spacy==3.3.0
 spacymoji==3.0.1
 https://github.com/explosion/spacy-models/releases/download/pt_core_news_lg-3.2.0/pt_core_news_lg-3.2.0.tar.gz
-tweepy==4.8.0
+tweepy==4.9.0
