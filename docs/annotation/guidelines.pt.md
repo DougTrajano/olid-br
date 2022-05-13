@@ -111,8 +111,7 @@ Abaixo é possível ver as categorias, suas definições e exemplos de comentár
     Exemplos:
 
     - Próximo major já sabem, galera: caçar o gordo e extermina-lo.
-    - Deveriam ter escolhido uma modelo menos gordinha, ela parece que não está passando fome !!
- 
+    - Deveriam ter escolhido uma modelo menos gordinha, ela parece que não está passando fome !! 
     - USER pode achar seu principe encantado,mas sempre vai acabar: Gorda,feia,virgem,cheia de poster de crepúsculo a parede!!
     - Me desculpem gente mulher nenhuma é Feliz com esse corpo? Ela precisa de tratamento isso é uma doença
     - USER nao é gorda nao,USER esta obesa.vai se tratar é o melhor que USER faz.
