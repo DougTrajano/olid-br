@@ -38,8 +38,10 @@ Abaixo é possível ver as categorias, suas definições e exemplos de comentár
     Exemplos:
 
     - USER velho broxa
-    - USER Igualzinho a você, usa uma massa por fora pra esconder que por dentro é frango.
-    - Ela tá dando vários surtos, amo que seja cancelada. Não aguento mais o povo forçando essa aleijada
+    - Me desculpem gente mulher nenhuma é Feliz com esse corpo? Ela precisa de tratamento isso é uma doença
+    - rt USER esse curso eh coisa de gente retardada mental vsf q porra
+    - USER IMBECIL PROMOVENDO A AGLOMERAÇÃO DO POVO USER E A PROPAGAÇÃO DA DOENÇA. QUANTA USER !!!!!!!!!!!!!!!!!!!!!
+    - parece legenda pra cego surdo e mudo
 
 ??? abstract "Ideology"
 
@@ -47,8 +49,12 @@ Abaixo é possível ver as categorias, suas definições e exemplos de comentár
 
     Exemplos:
 
+    - esse partido chamado P T e esse P Sol sao uma doenca pra nossa nacao um enfermo
+    - USER A Folha desde sempre apoiando a DITADURA e apoiando FASCISTAS que até se esquece de falar sobre seus ESCÂNDALOS como EMPRESTAR CARROS para a DITADURA ir TORTURAR PESSOAS. A Folha GOLPISTA nunca faz uma “autocrítica” URL
+    - USER Aqui na minha família fechado com o MITO PT LADRÃO NUNCA VOLTAMOS NESSA RAÇA IMUNDA FDP DE LADRÕES ✅🇧🇷🇧🇷 URL
+    - USER USER USER O Bolsonaro é corrupto mlk, para de ser retardado, seu cérebro tá atrofiando
+    - A juiza é pilantra igual a Sergio USER quer impor a lei da mordaça ameaçando e obrigado o rél o expresidente Lula a ficar calado Armação geral do judiciario partidario de Curitiba de Sergio USER
     - Bolsonaro: “Como é duro ser patrão no Brasil". 19 milhões de brasileiros passam fome e a grande preocupação do cretino é com os patrões.
-    - USER Um governo de Evangelicos. Um governo de Corruptos. Um governo de Criminosos. Um governo de Irresponsaveis. Um governo de Bandidos. Um governo de Psicopatas.
 
 ??? abstract "Insult"
 
@@ -75,6 +81,10 @@ Abaixo é possível ver as categorias, suas definições e exemplos de comentár
 
     Exemplos:
 
+    - Que vergonha esse pais só tem gay
+    - USER voce so gosta d sapatao caminhoeira de cabelo rapado
+    - USER baitola lixo
+    - USER USER lamentável acredita que existe pessoas que apóia o LGBT
     - USER O problema não é sexualidade e sim competência. É diferente ferrar só um rabo ou ferrar de milhares.
     - USER E quando não consegue espaço e relevância no meio, mente que é bi.
     - USER Você é uma vergonha para os gays pq tu é um gay ladrão de dinheiro da Pandemia.
@@ -89,6 +99,10 @@ Abaixo é possível ver as categorias, suas definições e exemplos de comentár
     - Povinho irritante e desinformado esses veganos chatos. Com certeza nao convencem nem suas familias.
     - USER crackudo voz de fumante
     - Coisa brega esse piercing no nariz. Muito feio para uma jornalista.
+    - USER USER seu cérebro derreteu por causa da maconha?????????
+    - Como ser feminista: Ser feia e gorda Pagar peitinho em passeata Ser peluda Odiar homens E achar q isso fará diferença
+    - Aula de como comer um maconheiro! Hahaha
+    - Ai aonde a tua maconha te levou KKKkKkkK
 
 ??? abstract "Physical Aspects"
 
@@ -98,7 +112,14 @@ Abaixo é possível ver as categorias, suas definições e exemplos de comentár
 
     - Próximo major já sabem, galera: caçar o gordo e extermina-lo.
     - Deveriam ter escolhido uma modelo menos gordinha, ela parece que não está passando fome !!
-    
+ 
+    - USER pode achar seu principe encantado,mas sempre vai acabar: Gorda,feia,virgem,cheia de poster de crepúsculo a parede!!
+    - Me desculpem gente mulher nenhuma é Feliz com esse corpo? Ela precisa de tratamento isso é uma doença
+    - USER nao é gorda nao,USER esta obesa.vai se tratar é o melhor que USER faz.
+    - RT USER: e olha pra cara gorda e feia de Isabelle .. sem contar da voz irritante dela URL
+    - A obesidade está acabando com essa mulher. Ridícula
+    - EU NÃO AGUENTO MAIS ESSE ALEIJADO SEM UMA PERNA DO CARALHO VAI TOMAR NO CU, O MALUCO NN SABE ANDAR COM A PERNA DIREITA FUDIDO HORRÍVEL URL
+
 ??? abstract "Profanity/Obscene"
     
     Discurso de ódio possui palavras obscenas, vulgar, pornográficas, etc.
@@ -110,6 +131,8 @@ Abaixo é possível ver as categorias, suas definições e exemplos de comentár
     - USER Passar porte de vacina é o meu pau
     - USER Cada filho da puta que apertou 17 tem as mas sujas de sangue
     - USER Com a PF na tua casa tu ficou bravinho né vagabundo?
+    - USER Toma no cu é vitamina como tu e tua prima.
+    - fudeu minha mãe acabou de chegar em casa e eu acabei de acordar tomei no cu
 
 ??? abstract "Racism"
 
@@ -119,6 +142,9 @@ Abaixo é possível ver as categorias, suas definições e exemplos de comentár
 
     - Essas filhas de pedreiro africano e foda
     - Não tenho tv colorida pra ficar olhando essa preta nao
+    - USER E quantos desses negros são inocentes e quantos são criminosos e bandidos? Te dou absoluta certeza que a maioria dos negros mortos não são inocentes, infelizmente muitas vezes inocentes acabam sendo mortos pela corrupção na polícia
+    - USER Sai macaco
+    - Essa nega do cão quer ser a dona da razão e da situação smp 😂😂😂
 
 ??? abstract "Religious Intolerance"
 
@@ -138,6 +164,10 @@ Abaixo é possível ver as categorias, suas definições e exemplos de comentár
 
     - Se eu fosse o Temer criava o Ministério da Cozinha e da Limpeza e colocava uma mulher, só pro pessoal chorar menos. hahahaha
     - USER Uma calcinha dessa fio-dental dentro da bunda não tem que resistir uma tentação dessa?
+    - Homem é um bicho estranho ao mesmo tmp ridículo 🤣
+    - Resumindo" Meteu gostoso na safada" fim da historia!
+    - Não tem dinheiro q essa mulher,ela é terrível não vai ter homem q a suporte
+    - Dá uma rola pras feminazi.quem sabe elas param de falar bosta.
 
 ??? abstract "Xenophobia"
 
@@ -145,6 +175,10 @@ Abaixo é possível ver as categorias, suas definições e exemplos de comentár
 
     Exemplos:
 
+    - Quem liga pra judeu kkkk
+    - odeio goiano e mineiro
+    - rt USER USER nao sei . pra mim todo japones que é comunista é burro... uma coisa q meu pai ensinou kk
+    - esse chinezinho falsificado e um pilantra. Não se deixa enganar como ele enganou os que votaram nele. Esse tipo de jumento só se elege uma vez.
     - USER O brasileiro merece o que tá passando povo ignorante e sem a menor consciência bando de fudido do caralho
     - USER USER PUTAQUEPARIUUUUUU........ESSAS PORCARIAS SÓ ACONTECE NO BRASIL.... RAÇA MALDITA ESSES BRASILEIROS....EXTINÇAO
     - Nordestino é uma desgraça cambada de demônio
