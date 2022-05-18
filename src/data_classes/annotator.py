@@ -5,7 +5,7 @@ class Annotator(BaseModel):
     id: Optional[str] = Field(None, title="Unique ID for the text")
     annotator_id: int = Field(..., title="Unique ID for the annotator")
     gender: str = Field(..., title="Annotator Gender")
-    age: int = Field(..., title="Annotator Age")
+    year_of_birth: int = Field(..., title="Year of birth of the annotator")
     education_level: str = Field(..., title="Annotator education level")
     annotator_type: str = Field(..., title="Annotator type")
 

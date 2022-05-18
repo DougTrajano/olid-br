@@ -1,6 +1,7 @@
 import json
 import yaml
 import logging
+import datetime
 import pandas as pd
 from src.data_classes import RawText
 from typing import Dict, Any, List, Union
@@ -175,7 +176,7 @@ def prepare_data_to_px(df: pd.DataFrame):
             data.append({"Annotator": annotator, "Label": label, "Count": count})
     return pd.DataFrame(data)
 
-def dict_serialize_date(data, keys):
+def dict_serialize_date(data: List[Dict[Any, Any]], keys: List[Any]):
     """Serialize keys that are dates in a list of dictionaries to ISO 8601.
 
     Args:
@@ -189,6 +190,7 @@ def dict_serialize_date(data, keys):
     for i in data:
         for key in keys:
             if key in i:
-                i[key] = i[key].isoformat()
+                if isinstance(i[key], datetime.datetime):
+                    i[key] = i[key].isoformat()
         new_data.append(i)
     return new_data
