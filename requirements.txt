@@ -1,4 +1,4 @@
-google-api-python-client==2.47.0
+google-api-python-client==2.48.0
 kaggle==1.5.12
 metaflow==2.6.1
 pydantic==1.8.2
