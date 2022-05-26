@@ -1,28 +1,27 @@
-# Annotation
+---
+title: Annotation Overview
+summary: An overview about the annotation process used in the OLID-BR dataset.
+---
 
-This section describes the [**data annotation process**]{Data annotation is the categorization and labeling of data for AI applications,.} and the [annotators guidelines](#annotators-guidelines) for the dataset.
+# Annotation Overview
 
-## Annotation Process
+In this section, we will describe in detail the [**annotation process**]{Data annotation is the categorization and labeling of data for AI applications.} developed for the OLID-BR dataset.
 
-We use [qualified annotators](#who-are-qualified-annotators) to annotate the dataset. The annotators are trained by the authors of the dataset.
+## What is data labeling?
 
-### Inter-annotator agreement
+Data labeling, or data annotation, is the process of identifying raw data (images, text files, videos, etc.) when developing a machine learning (ML) model. It requires the identification of raw data with one or more meaningful and informative labels that provides context so that a machine learning model can learn from it. For example, labels might indicate whether a photo contains a bird or car, which words were uttered in an audio recording, or if an x-ray contains a tumor. Data labeling is required for a variety of use cases including computer vision, natural language processing, and speech recognition.[^1][^2]
 
-The inter-annotator agreement varies depending on the task. Basically, each comment will be tagged by two judges, if they disagree, a third annotator will be used to decide the annotation.
+## Data labeling approaches
 
-We will provide the Kappa statistic that measures the agreement between the annotators.
+The literature presents several approaches to data labeling. In the OLID-BR project, we used the following approach:
 
-## Who are qualified annotators?
+- **Internal labeling**: Using in-house data science experts simplifies tracking, provides greater accuracy, and increases quality. However, this approach typically requires more time and favors large companies with extensive resources.
+- **Outsourcing**: This can be an optimal choice for high-level temporary projects, but developing and managing a freelance-oriented workflow can also be time-consuming. Though freelancing platforms provide comprehensive candidate information to ease the vetting process, hiring managed data labeling teams provides pre-vetted staff and pre-built data labeling tools.
 
-A qualified annotator must have the following attributes:
- 
-- **Basic English** as it has the language used in the annotation tool.
-- **Native Portuguese** as the texts presented in the dataset are in Brazilian Portuguese.
-- A good understanding of offensive language (in Portuguese) and how to detect it. The concepts will be explained below.
+In the first iteration of the annotation process, we will use the **internal labeling** approach, in other words, the author of the dataset labeled the data. We also had a volunteer who helped us label the data.
 
-Note takers will be trained by the course [Comunicação Não Violenta - FECAP](https://www.fecap.br/curta-duracao/comunicacao-nao-violenta-1/) with the following syllabus:
+In the next iterations, we will use the **outsourcing** approach, three contract workers will label the data.
 
-- Differences between negativity and toxicity in communication and behavior;
-- Toxic people and behavior;
-- Assertive behavior and communication;
-- Non-violent communication, awareness and non-judgment.
+[^1]: [What is data labeling? - AWS](https://aws.amazon.com/sagemaker/data-labeling/what-is-data-labeling/)
+
+[^2]: [What is data labeling? - IBM](https://www.ibm.com/cloud/learn/data-labeling)

@@ -43,12 +43,15 @@ theme:
     - toc.integrate
 
 nav:
-  - OLID-BR: index.en.md
-  - OLID-EN: olid-en.en.md
+  - Overview: index.en.md
   - Get Started: get-started.en.md
   - Annotation:
     - Overview: annotation/index.en.md
     - Guidelines: annotation/guidelines.en.md
+    - Inter-Rater Reliability: annotation/inter-rater-reliability.en.md
+    - Iterations: annotation/iterations.en.md
+    - Qualified Annotators: annotation/qualified-annotators.en.md
+    - Schema: annotation/schema.en.md
   - Data Pipeline: data-pipeline.en.md
   - Metadata: metadata.en.md
   - Glossary: glossary.en.md
@@ -101,21 +104,28 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js
   - javascripts/tables.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   
 markdown_extensions:
-  - admonition
   - abbr
+  - admonition
   - attr_list
   - def_list
   - footnotes
-  - meta
   - md_in_html
-  - toc:
-      permalink: "#"
-      slugify: !!python/name:pymdownx.slugs.uslugify
+  - meta
+  - pymdownx.caret
   - pymdownx.details
-  - pymdownx.tabbed
+  - pymdownx.magiclink
+  - pymdownx.mark
   - pymdownx.progressbar
+  - pymdownx.snippets
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.highlight:
       linenums: true
   - pymdownx.tasklist:
@@ -128,3 +138,6 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_div_format
+  - toc:
+      permalink: "#"
+      slugify: !!python/name:pymdownx.slugs.uslugify

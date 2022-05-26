@@ -6,35 +6,37 @@ Nós forneceremos alguns metadados do dataset para auxiliar em futuras análises
 
 Para cada anotador qualificado, nós coletamos as seguintes informações:
 
-- **Annotator ID**: O ID do anotador.
-- **Age**: A idade do anotador.
-- **Gender**: O gênero do anotador.
+- `annotator_id` O ID do anotador.
+- `gender` O gênero do anotador.
     - Male
     - Female
     - Other
-- **Education Level**: O nível de educação do anotador.
+- `year_of_birth` O ano de nascimento do anotador.
+- `education_level` O nível de educação do anotador.
     - Primary School
     - Secondary School
     - Bachelor's degree
     - Master's degree
     - Doctoral degree
-- **Annotator Type**: O tipo do anotador.
+- `annotator_ type` O tipo do anotador.
     - Volunteer
     - Researcher
     - Contract Worker
 
-Essa informação pode ser usada para ajudar a entender o perfil do anotador, mantendo a anonimidade do mesmo.
+Essas informações podem ser usadas para ajudar a entender o perfil dos anotadores, mantendo a anonimidade dos mesmos.
 
 ## Comentários
 
 Para cada comentário, coletamos informações contextuais baseadas nas postagens em redes sociais.
 
-- **Origin**: A plataforma social onde o comentário foi postado.
-- **Time shift**: Turno do dia que o comentário foi postado.
-- **Publisher category**: A categoria do publicador.
+- `source` A rede social ou dataset onde o comentário foi coletado.
+- `created_at` A data e hora da postagem do comentário.
+- `collected_at` A data e hora da coleta do comentário.
+- `toxicity_score` A pontuação de toxicidade do comentário.
+- `category` A categoria do publicador.
     - Company, Organization or Institution
     - Entertainment
     - Government
     - News
     - Politics
-  
+    

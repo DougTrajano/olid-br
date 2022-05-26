@@ -1,4 +1,9 @@
-# Diretrizes para anotadores
+---
+title: Diretrizes de anotação
+summary: As diretrizes de anotação são um conjunto de regras e convenções que são utilizadas para a anotação de dados.
+---
+
+# Diretrizes de anotação
 
 Nessa página detalhamos as diretrizes seguidas pelos anotadores durante o processo de anotação dos textos presentes no OLID-BR.
 

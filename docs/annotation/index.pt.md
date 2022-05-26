@@ -1,28 +1,27 @@
-# Anotação
+---
+title: Visão geral da anotação
+summary: Uma visão geral sobre o processo de anotação utilizado no conjunto de dados OLID-BR.
+---
 
-Essa seção contém o [**processo de anotação dos dados**]{Anotação dos dados é o processo de rotulagem de dados. É usada para treinar diferentes modelos em computadores.} e as [diretrizes para anotadores](#diretrizes-para-anotadores) do dataset.
+# Visão geral da anotação
 
-## Processo de anotação
+Nesta seção, descreveremos em detalhes o [**processo de anotação**]{A anotação de dados é a categorização e rotulagem de dados para aplicativos de IA.} desenvolvido para o conjunto de dados OLID-BR.
 
-Nós usamos anotadores qualificados para anotar os dados. Os anotadores foram treinados pelo autor do dataset.
+## O que é rotulagem de dados?
 
-### Concordância entre anotadores
+A rotulagem de dados, ou anotação de dados, é o processo de identificação de dados brutos (imagens, arquivos de texto, vídeos etc.) ao desenvolver um modelo de aprendizado de máquina (ML). Requer a identificação de dados brutos com um ou mais rótulos significativos e informativos que forneçam contexto para que um modelo de aprendizado de máquina possa aprender com ele. Por exemplo, os rótulos podem indicar se uma foto contém um pássaro ou um carro, quais palavras foram pronunciadas em uma gravação de áudio ou se um raio-x contém um tumor. A rotulagem de dados é necessária para vários casos de uso, incluindo visão computacional, processamento de linguagem natural e reconhecimento de fala.[^1][^2]
 
-O acordo entre os anotadores varia de acordo com a tarefa. Basicamente, cada comentário será rotulado por dois anotadores, caso eles discordam, um terceiro anotador será usado para decidir a anotação.
+## Abordagens de rotulagem de dados
 
-Iremos disponibilizar a estatística de Kappa que mede a concordância entre os anotadores.
+A literatura apresenta várias abordagens para rotulagem de dados. No projeto OLID-BR, usamos a seguinte abordagem:
 
-## Quem é um anotador qualificado?
+- ***Internal labeling***: o uso de especialistas internos em ciência de dados simplifica o rastreamento, oferece maior precisão e aumenta a qualidade. No entanto, essa abordagem normalmente requer mais tempo e favorece grandes empresas com recursos extensos.
+- ***Terceirização***: Esta pode ser a escolha ideal para projetos temporários de alto nível, mas desenvolver e gerenciar um fluxo de trabalho orientado a freelance também pode ser demorado. Embora as plataformas de freelancers forneçam informações abrangentes sobre os candidatos para facilitar o processo de verificação, a contratação de equipes de rotulagem de dados gerenciadas fornece uma equipe pré-avaliada e ferramentas de rotulagem de dados pré-criadas.
 
-Um anotador qualificado precisa ter as seguintes características:
+Na primeira iteração do processo de anotação, usaremos a abordagem ***internal labeling**, ou seja, o autor do conjunto de dados anotou os dados. Também tivemos um voluntário que nos ajudou a rotular os dados.
 
-- **Inglês básico**, já que a ferramenta de anotação é feita em Inglês.
-- **Português nativo**, já que os textos do dataset são em Português do Brasil.
-- Bom conhecimento sobre linguagem ofensiva (em Português) e como identificá-la. Os conceitos serão explicados em X.
+Nas próximas iterações, usaremos a abordagem de ***outsourcing***, três trabalhadores contratados rotularão os dados.
 
-Os anotadores serão treinados pelo curso [Comunicação Não Violenta - FECAP](https://www.fecap.br/curta-duracao/comunicacao-nao-violenta-1/) com o seguinte conteúdo programático:
+[^1]: [O que é rotulagem de dados? - AWS](https://aws.amazon.com/sagemaker/data-labeling/what-is-data-labeling/)
 
-- Diferenças entre negatividade e toxicidade na comunicação e no comportamento;
-- Pessoas e comportamentos tóxicos;
-- Comportamento e comunicação assertiva;
-- Comunicação não violenta, consciência e não julgamento.
+[^2]: [O que é rotulagem de dados? - IBM](https://www.ibm.com/cloud/learn/data-labeling)

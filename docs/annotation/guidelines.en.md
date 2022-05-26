@@ -1,3 +1,8 @@
+---
+title: Annotation Guidelines
+summary: The guidelines followed by our annotators in the OLID-BR dataset.
+---
+
 # Annotation Guidelines
 
 On this page, we will detail the guidelines followed by our annotators in the data labeling process in the OLID-BR.
@@ -6,11 +11,11 @@ On this page, we will detail the guidelines followed by our annotators in the da
 
 You will see comments with offensive/toxic content and you will need to answer some questions about that, these questions will help us identify offensive comments and/or better understand the behavior of *haters*.
 
-In the image below, you can see an example of the annotation screen viewed by the annotator.
+In the image below, you can see an example of the labeling interface that our annotators will see.
 
 <figure>
   <img src="../images/label_studio.png"/>
-  <figcaption>Annotation - Label Studio</figcaption>
+  <figcaption>Labeling Interface - Label Studio</figcaption>
 </figure>
 
 ## What questions should you answer?
