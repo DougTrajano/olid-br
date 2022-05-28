@@ -31,7 +31,17 @@ Na segunda iteração, introduzimos trabalhadores contratados para fazer as anot
 
 ### Confiabilidade entre avaliadores
 
-Conforme descrito na seção [**Inter-Rater Reliability**](inter-rater-reliability.en.md), avaliamos a confiabilidade dos anotadores usando um conjunto de métricas.
+Conforme descrito na seção [**Inter-Rater Reliability**](inter-rater-reliability.en.md), avaliamos a confiabilidade dos anotadores usando diferentes coeficientes.
+
+Também abordamos a análise considerando como um problema *multi-label* ou vários problemas binários.
+
+**Problem *Multi-Label***
+
+Para todos os nossos rótulos de toxicidade (`health`, `ideology`, `insult`, `lgbtqphobia`, `other_lifestyle`, `physical_aspects`, `profanity_obscene`, `racism`, `religious_intolerance`, `sexism`, `xenophobia`) calculamos o Krippendorff's alpha usando a distância MASI.
+
+Obtivemos **0,1962** para o Krippendorff's alpha, que é considerado uma pequena concordância.
+
+**Problema binário**
 
 | Feature / metrics          | Percent Agreement | Krippendorff's alpha | Gwet's AC<sub>1</sub> | Comments |
 | -------------------------- | :---------------: | :------------------: | :--------: | -------- |
@@ -58,13 +68,11 @@ Conforme descrito na seção [**Inter-Rater Reliability**](inter-rater-reliabili
 
 #### Conclusões
 
-A análise de acordo mostra que temos anotações mais inconsistentes nos rótulos `is_targeted`, `targeted_type` e `insult`. Também temos alguns equívocos nas diretrizes de anotação por um de nossos anotadores, garantiremos que as diretrizes sejam seguidas por nossos anotadores na próxima fase. Para outros rótulos, temos anotações mais consistentes, o que significa que o processo de treinamento dos anotadores é crucial para garantir a qualidade das anotações.
+Tivemos um mal entendimento das diretrizes de anotação por um dos anotadores, o que acabou gerando inconsistência nos rótulos `is_targeted` e `targeted_type`.
 
-Média sem `is_targeted` e `targeted_type` devido a uma anotação inconsistente de um dos anotadores.
+Sobre os rótulos de toxicidade (*toxicity labels*), percebemos que são raros os casos em que todos os anotadores concordam com a anotação, levando a um alto índice de discordância e consequentemente a um baixo valor de Krippendorff's alpha. Os rótulos que apresentaram maior discordância são `insult`, `ideology` e `profanity_obscene`.
 
-- Percent Agreement: 0.9458
-- Krippendorff's alpha: 0.1308
-- Gwet's AC<sub>1</sub>: 0.9613
+Iremos repassar as diretrizes de anotação com os anotadores para a próxima iteração.
 
 <details><summary>Profiling Report</summary>
 

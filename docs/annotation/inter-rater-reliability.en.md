@@ -37,6 +37,23 @@ All our ratings are [**nominal**]{A type of data that is used to label variables
 - **Brennan-Prediger** ($\hat{K}_{BP}$): More paradox-resistant than alternative coefficients.
 - **Krippendorff's Alpha** ($\hat{\alpha}_K$) Similar to Fleiss' Generalized Kappa - Minor differences.
 
+Di Eugenio & Glass (2004)[^7] argue that using multiple reliability metrics with different methods for computing $p_{(A_e)}$ can be more revealing of than a single metric. So, we will select a range of metrics to use in our analysis.
+
+### The Simplicity of the Percent Agreement
+
+Because percent agreement is figured as an average across observations it can hide important
+disagreements.
+
+> "Averages over all categories of a variable… hide unreliable categories behind reliable ones” - Krippendorff[^5]
+
+> "when all coders use only one category, there is no variation and hence no evidence of reliability" - Krippendorff[^6]
+
+To remedy this he suggests that in some cases it is appropriate to conduct multiple tests within a single variable.
+
+> "All distinctions that matter should be tested for their reliability" - Krippendorff[^6]
+
+### The Kappa paradoxes
+
 Kappa often yields coefficients that are unexpectedly low when compared to the percent agreement. This problem has been referred to in the literatura as the Kappa paradoxes. Feinstein and Cicchetti (1990)[^4] provides a detailed explanation about two such paradoxes. These authors made the following two statements:
 
 - "The first paradox of $k$ (Kappa) is that if $p_e$ (the percent chance agreement) is large, the correction process can convert a relatively high value of $p_0$ to a relatively low value of $k$" (Feinstein & Cicchetti, (1990, p. 544)[^4]
@@ -54,15 +71,11 @@ $$
 p_a = \frac{n_{\text{agreeing}}}{n_{\text{total}}}
 $$
 
-It's an cofficient between 0 and 1. The closer to 1, the better.
-
 **Interpretation**
 
 | Slight | Fair | Moderate | Substantial | Almost perfect |
-| :-: | :-: | :-: | :-: | :-: |
+| :----: | :---: | :-----: | :---------: | :------------: |
 | 0.01 - 0.20 | 0.21 - 0.40 | 0.41 - 0.60 | 0.61 - 0.80 | 0.81 - 0.99 |
-
-Almost all our features are binary and imbalanced, so it's recommended to use a chance-corrected agreement coefficient.
 
 ### Gwet’s AC<sub>1</sub>
 
@@ -83,7 +96,7 @@ $$
 **Interpretation**
 
 | Poor | Fair | Moderate | Substantial | Almost perfect |
-| :-: | :-: | :-: | :-: | :-: |
+| :--: | :--: | :------: | :---------: | :------------: |
 | < 0.20 | 0.21 - 0.40 | 0.41 - 0.60 | 0.61 - 0.80 | 0.81 - 0.99 |
 
 ### Krippendorff's Alpha
@@ -118,3 +131,6 @@ $$
 [^2]: Gwet, Kilem Li. "Computing inter‐rater reliability and its variance in the presence of high agreement." British Journal of Mathematical and Statistical Psychology 61.1 (2008): 29-48.
 [^3]: Hayes, Andrew F., and Klaus Krippendorff. "Answering the call for a standard reliability measure for coding data." Communication methods and measures 1.1 (2007): 77-89.
 [^4]: Feinstein, Alvan R., and Domenic V. Cicchetti. "High agreement but low kappa: I. The problems of two paradoxes." Journal of clinical epidemiology 43.6 (1990): 543-549.
+[^5]: Krippendorff, Klaus. Content analysis: An introduction to its methodology. Sage publications, 2018.
+[^6]: Krippendorff, K. "Some Common Misconceptions and Recommendations." Human Communication Research 30 (2004): 411-433.
+[^7]: Eugenio, Barbara Di, and Michael Glass. "The kappa statistic: A second look." Computational linguistics 30.1 (2004): 95-101.

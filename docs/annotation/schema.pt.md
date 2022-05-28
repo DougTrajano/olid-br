@@ -18,7 +18,7 @@ O OLID-BR contém uma coleção de frases anotadas em português brasileiro usan
   <figcaption>Taxonomia hierárquica para categorizar linguagem ofensiva, proposta pelo autor.</figcaption>
 </figure>
 
-Para isso, definimos 4 perguntas que nossos [anotadores qualificados](qualified-annotators.pt.md) responderão a cada frase.
+Para isso, definimos 4 perguntas que nossos [**anotadores qualificados**](qualified-annotators.pt.md) responderão a cada frase.
 
 - Este texto é tóxico?
 - Que tipo de toxicidade tem?

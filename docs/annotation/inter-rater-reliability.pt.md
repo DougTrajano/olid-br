@@ -37,6 +37,22 @@ Todas as nossas classificações são do tipo [***nominal***]{Um tipo de dado us
 - **Brennan-Prediger** ($\hat{K}_{BP}$): Mais resistente a paradoxos do que coeficientes alternativos.
 - **Krippendorff's Alpha** ($\hat{\alpha}_K$) Semelhante ao Kappa Generalizado de Fleiss - Diferenças menores.
 
+Di Eugenio & Glass (2004)[^7] argumentam que o uso de várias métricas de confiabilidade com diferentes métodos para calcular $p_{(A_e)}$ pode ser mais revelador do que uma única métrica. Assim, selecionaremos uma série de métricas para usar em nossa análise.
+
+### A simplicidade de Percent Agreement
+
+Como a *Percent Agreement* é calculada como uma média entre as observações, ela pode ocultar importantes desacordos.
+
+> "Averages over all categories of a variable… hide unreliable categories behind reliable ones” - Krippendorff[^5]
+
+> "when all coders use only one category, there is no variation and hence no evidence of reliability" - Krippendorff[^6]
+
+Para remediar isso, ele sugere que, em alguns casos, é apropriado realizar vários testes dentro de uma única variável.
+
+> "All distinctions that matter should be tested for their reliability" - Krippendorff[^6]
+
+### Os paradoxos do Kappa
+
 Kappa geralmente produz coeficientes inesperadamente baixos quando comparados com a porcentagem de concordância. Este problema tem sido referido na literatura como os paradoxos Kappa. Feinstein e Cicchetti (1990)[^4] fornecem uma explicação detalhada sobre dois desses paradoxos. Esses autores fizeram as duas seguintes afirmações:
 
 - "O primeiro paradoxo de $k$ (Kappa) é que se $p_e$ (a porcentagem de concordância) for grande, o processo de correção pode converter um valor relativamente alto de $p_0$ em um valor relativamente baixo de $k$" (Feinstein & Cicchetti, (1990, p. 544)[^4]
@@ -44,7 +60,7 @@ Kappa geralmente produz coeficientes inesperadamente baixos quando comparados co
 
 Portanto, usaremos [Percent Agreement](#percent-agreement), [Gwet's AC<sub>1</sub>](#gwets-ac1) e [Krippendorff's Alpha](#krippendorffs-alpha) como coeficientes para avaliar a qualidade das anotações.
 
-## Métricas
+## Coeficientes selecionados
 
 ### Percent agreement
 
@@ -54,15 +70,11 @@ $$
 p_a = \frac{n_{\text{concordando}}}{n_{\text{total}}}
 $$
 
-É um coeficiente entre 0 e 1. Quanto mais próximo de 1, melhor.
-
 **Interpretação**
 
 | Ruim | Leve | Moderado | Substancial | Quase perfeito |
 | :-: | :-: | :-: | :-: | :-: |
 | 0,01 - 0,20 | 0,21 - 0,40 | 0,41 - 0,60 | 0,61 - 0,80 | 0,81 - 0,99 |
-
-Quase todos os nossos recursos são binários e desequilibrados, por isso é recomendável usar um coeficiente de concordância corrigido pelo acaso (chance-corrected).
 
 ### Gwet's AC<sub>1</sub>
 
@@ -118,3 +130,6 @@ $$
 [^2]: Gwet, Kilem Li. "Computando a confiabilidade entre avaliadores e sua variação na presença de alta concordância." British Journal of Mathematical and Statistical Psychology 61.1 (2008): 29-48.
 [^3]: Hayes, Andrew F. e Klaus Krippendorff. "Atendendo ao pedido de uma medida de confiabilidade padrão para codificação de dados." Métodos e medidas de comunicação 1.1 (2007): 77-89.
 [^4]: Feinstein, Alvan R., and Domenic V. Cicchetti. "High agreement but low kappa: I. The problems of two paradoxes." Journal of clinical epidemiology 43.6 (1990): 543-549.
+[^5]: Krippendorff, Klaus. Content analysis: An introduction to its methodology. Sage publications, 2018.
+[^6]: Krippendorff, K. "Some Common Misconceptions and Recommendations." Human Communication Research 30 (2004): 411-433.
+[^7]: Eugenio, Barbara Di, and Michael Glass. "The kappa statistic: A second look." Computational linguistics 30.1 (2004): 95-101.

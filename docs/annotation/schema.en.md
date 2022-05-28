@@ -18,7 +18,7 @@ OLID-BR contains a collection of annotated sentences in Brazilian Portuguese usi
   <figcaption>Hierarchical taxonomy for categorizing offensive language, proposed by author.</figcaption>
 </figure>
 
-To achieve this, we defined 4 questions that our [qualified annotators](qualified-annotators.en.md) will answer to each sentence.
+To achieve this, we defined 4 questions that our [**qualified annotators**](qualified-annotators.en.md) will answer to each sentence.
 
 - Is this text toxic?
 - Which kind of toxicity it has?

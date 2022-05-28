@@ -31,24 +31,34 @@ In the second iteration, we introduced contract workers to do the annotations. T
 
 ### Inter-Rater Reliability
 
-As described in the [**Inter-Rater Reliability**](inter-rater-reliability.en.md) section, we evaluate the reliability of the annotators using a set of metrics.
+As described in the [**Inter-Rater Reliability**](inter-rater-reliability.en.md) section, we evaluate the reliability of the annotators using a several coefficients.
+
+We also address the analysis considering as a multi-label problem or several binary problems.
+
+**Multi-Label Problem**
+
+For all our toxicity labels (`health`, `ideology`, `insult`, `lgbtqphobia`, `other_lifestyle`, `physical_aspects`, `profanity_obscene`, `racism`, `religious_intolerance`, `sexism`, `xenophobia`) we calculate the Krippendorff's alpha using the MASI distance.
+
+We got **0.1962** for the Krippendorff's alpha, which is considered as a slight agreement.
+
+**Binary Problem**
 
 | Feature / metrics          | Percent Agreement | Krippendorff's alpha | Gwet's AC<sub>1</sub> | Comments |
 | -------------------------- | :---------------: | :------------------: | :--------: | -------- |
-| **is\_offensive**          | 0,7277            | 0,0595               | 0,7750     | |
-| **is\_targeted**           | 0,1610            | \-0,1348             | \-0,1029   | [1] |
-| **targeted\_type**         | 0,0641            | 0,2461               | 0,4978     | [1] |
-| **health**                 | 0,9760            | 0,0447               | 0,9837     | |
-| **ideology**               | 0,7647            | 0,3019               | 0,7976     | [3] |
-| **insult**                 | 0,4713            | 0,0895               | 0,425      | [3] |
-| **lgbtqphobia**            | 0,9453            | 0,5583               | 0,9603     | |
-| **other\_lifestyle**       | 0,9860            | 0,0824               | 0,9906     | |
-| **physical\_aspects**      | 0,9463            | 0,3272               | 0,9622     | |
-| **profanity\_obscene**     | 0,6837            | 0,0850               | 0,726      | [3] |
-| **racism**                 | 0,9750            | 0,2564               | 0,9829     | |
-| **religious\_intolerance** | 1,0               | 1,0                  | 1,0        | [2] |
-| **sexism**                 | 0,8753            | 0,1721               | 0,9076     | |
-| **xenophobia**             | 0,9673            | 0,0732               | 0,9777     | |
+| **is\_offensive**          | 0.7277            | 0.0595               | 0.7750     | |
+| **is\_targeted**           | 0.1610            | \-0.1348             | \-0.1029   | [1] |
+| **targeted\_type**         | 0.0641            | 0.2461               | 0.4978     | [1] |
+| **health**                 | 0.9760            | 0.0447               | 0.9837     | |
+| **ideology**               | 0.7647            | 0.3019               | 0.7976     | [3] |
+| **insult**                 | 0.4713            | 0.0895               | 0.425      | [3] |
+| **lgbtqphobia**            | 0.9453            | 0.5583               | 0.9603     | |
+| **other\_lifestyle**       | 0.9860            | 0.0824               | 0.9906     | |
+| **physical\_aspects**      | 0.9463            | 0.3272               | 0.9622     | |
+| **profanity\_obscene**     | 0.6837            | 0.0850               | 0.726      | [3] |
+| **racism**                 | 0.9750            | 0.2564               | 0.9829     | |
+| **religious\_intolerance** | 1.0               | 1.0                  | 1.0        | [2] |
+| **sexism**                 | 0.8753            | 0.1721               | 0.9076     | |
+| **xenophobia**             | 0.9673            | 0.0732               | 0.9777     | |
 
 #### Comments
 
@@ -58,13 +68,11 @@ As described in the [**Inter-Rater Reliability**](inter-rater-reliability.en.md)
 
 #### Conclusions
 
-The Agreement Analysis shows that we have more inconsistent annotations in labels `is_targeted`, `targeted_type`, and `insult`. We also have some misunderstandings in the annotation guidelines by one of our annotators, we will ensure that the guidelines are followed by our annotators in the next phase. For other labels, we have more consistent annotations which means that the process to train the annotators is crucial to ensure the quality of the annotations.
+We had a misunderstanding of the annotation guidelines by one of the annotators, which resulted in inconsistency in the `is_targeted` and `targeted_type` labels.
 
-Average without `is_targeted` and `targeted_type` due an inconsistent annotation by one annotator.
+Regarding toxicity labels, we noticed that there are rare cases in which all annotators agree with the annotation, leading to a high rate of disagreement and consequently to a low value of Krippendorff's alpha. The labels with the highest disagreement are `insult`, `ideology` and `profanity_obscene`.
 
-- Percent Agreement: 0.9458
-- Krippendorff's alpha: 0.1308
-- Gwet's AC<sub>1</sub>: 0.9613
+We will pass along the annotation guidelines with the annotators for the next iteration.
 
 <details><summary>Profiling Report</summary>
 
