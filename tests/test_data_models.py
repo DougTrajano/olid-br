@@ -1,7 +1,7 @@
 import pytest
 import datetime
 from typing import Dict, Any
-from src.data_models import (
+from src.data_classes import (
     Annotator,
     RawText,
     ProcessedText,
@@ -13,15 +13,15 @@ ANNOTATORS = [
         "id": "123456789",
         "annotator_id": 1,
         "gender": "Male",
-        "age": 18,
-        "education_level": "secondary school",
+        "year_of_birth": 1993,
+        "education_level": "high school",
         "annotator_type": "volunteer",
     },
     {
         "id": "987654321",
         "annotator_id": 2,
         "gender": "Female",
-        "age": 20,
+        "year_of_birth": 1991,
         "education_level": "bachelor's degree",
         "annotator_type": "researcher"
     }

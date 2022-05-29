@@ -2,7 +2,7 @@ import json
 import pytest
 import datetime
 from typing import Dict, List, Any, Tuple
-from src.data_models import RawText, ProcessedText
+from src.data_classes import RawText, ProcessedText
 from src.utils import (
     read_yaml,
     save_json,
