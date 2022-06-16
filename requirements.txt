@@ -1,13 +1,13 @@
-google-api-python-client==2.47.0
+google-api-python-client==2.50.0
 kaggle==1.5.12
-metaflow==2.6.1
+metaflow==2.6.3
 pydantic==1.8.2
 python-dotenv==0.20.0
 PyYAML==6.0
 retrying==1.3.3
 scikit-learn==1.0.2
 simpletransformers==0.63.6
-spacy==3.2.0
+spacy==3.3.1
 spacymoji==3.0.1
 https://github.com/explosion/spacy-models/releases/download/pt_core_news_lg-3.2.0/pt_core_news_lg-3.2.0.tar.gz
 tweepy==4.9.0
