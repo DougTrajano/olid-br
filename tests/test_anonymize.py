@@ -7,7 +7,7 @@ TESTS = [
         "without_users": "Acabei de solicitar minha portabilidade para a USER, USER acabou de perder um cliente #decepcao https://www.consumidor.gov.br/",
         "without_urls": "Acabei de solicitar minha portabilidade para a @vivobr, @TIMBrasil acabou de perder um cliente #decepcao URL",
         "without_hashtags": "Acabei de solicitar minha portabilidade para a @vivobr, @TIMBrasil acabou de perder um cliente HASHTAG https://www.consumidor.gov.br/",
-        "without_names": "Acabei de solicitar minha portabilidade para a @vivobr, USER acabou de perder um cliente USERUSER https://www.consumidor.gov.br/",
+        "without_names": "Acabei de solicitar minha portabilidade para a @vivobr, USER acabou de perder um cliente #decepcao https://www.consumidor.gov.br/",
         "without_all": "Acabei de solicitar minha portabilidade para a USER, USER acabou de perder um cliente HASHTAG URL"
     },
     {
@@ -23,7 +23,7 @@ TESTS = [
         "without_users": "Siga nossos canais: Instagram USER e Telegram https://t.me/sunonoticias",
         "without_urls": "Siga nossos canais: Instagram @SunoNoticias e Telegram URL",
         "without_hashtags": "Siga nossos canais: Instagram @SunoNoticias e Telegram https://t.me/sunonoticias",
-        "without_names": "Siga nossos canais: Instagram @SunoNoticias e USER https://t.me/sunonoticias",
+        "without_names": "Siga nossos canais: USER @SunoNoticias e USER https://t.me/sunonoticias",
         "without_all": "Siga nossos canais: USER USER e USER URL"
     },
     {
@@ -31,7 +31,7 @@ TESTS = [
         "without_users": "Previsão é que vacinação de adolescentes seja retomada na quinta-feira https://glo.bo/3k4gXd5 #G1 #Vacina #RJ",
         "without_urls": "Previsão é que vacinação de adolescentes seja retomada na quinta-feira URL #G1 #Vacina #RJ",
         "without_hashtags": "Previsão é que vacinação de adolescentes seja retomada na quinta-feira https://glo.bo/3k4gXd5 HASHTAG HASHTAG HASHTAG",
-        "without_names": "Previsão é que vacinação de adolescentes seja retomada na quinta-feira https://glo.bo/3k4gXd5 USERUSER USERUSER USERUSER",
+        "without_names": "Previsão é que vacinação de adolescentes seja retomada na quinta-feira https://glo.bo/3k4gXd5 USERG1 USERUSER USERUSER",
         "without_all": "Previsão é que vacinação de adolescentes seja retomada na quinta-feira URL HASHTAG HASHTAG HASHTAG"
     },
     {
@@ -47,7 +47,7 @@ TESTS = [
         "without_users": "Cerimônia de Lançamento do Projeto Pró-Águas Urucuia. - Arinos/MG - 17 Set 21. USER USER USER #brasil",
         "without_urls": "Cerimônia de Lançamento do Projeto Pró-Águas Urucuia. - Arinos/MG - 17 Set 21. @mdregional_br @rogeriosmarinho @govbr #brasil",
         "without_hashtags": "Cerimônia de Lançamento do Projeto Pró-Águas Urucuia. - Arinos/MG - 17 Set 21. @mdregional_br @rogeriosmarinho @govbr HASHTAG",
-        "without_names": "USER de Lançamento do Projeto USER USER. - USER/USER - 17 Set 21. @mdregional_br USER @govbr #USER",
+        "without_names": "USER de Lançamento do Projeto USER USER. - USER/USER - 17 Set 21. USER @rogeriosmarinho @govbr #USER",
         "without_all": "USER de Lançamento do Projeto USER USER. - USER/USER - 17 Set 21. USER USER USER HASHTAG"
     },
     {
@@ -55,7 +55,7 @@ TESTS = [
         "without_users": "O USER assim investirá R$ 10,8 milhões no incentivo a gestores municipais com foco no atendimento de 32 milhões de adolescentes do Brasil, mesmo nos locais de mais difícil acesso! Mais informações no nosso telegram: https://t.me/jairbolsonarobrasil",
         "without_urls": "O @minsaude assim investirá R$ 10,8 milhões no incentivo a gestores municipais com foco no atendimento de 32 milhões de adolescentes do Brasil, mesmo nos locais de mais difícil acesso! Mais informações no nosso telegram: URL",
         "without_hashtags": "O @minsaude assim investirá R$ 10,8 milhões no incentivo a gestores municipais com foco no atendimento de 32 milhões de adolescentes do Brasil, mesmo nos locais de mais difícil acesso! Mais informações no nosso telegram: https://t.me/jairbolsonarobrasil",
-        "without_names": "O @minsaude assim investirá R$ 10,8 milhões no incentivo a gestores municipais com foco no atendimento de 32 milhões de adolescentes do Brasil, mesmo nos locais de mais difícil acesso! Mais informações no nosso telegram: USER",
+        "without_names": "O @minsaude assim investirá R$ 10,8 milhões no incentivo a gestores municipais com foco no atendimento de 32 milhões de adolescentes do Brasil, mesmo nos locais de mais difícil acesso! Mais informações no nosso telegram: https://t.me/jairbolsonarobrasil",
         "without_all": "O USER assim investirá R$ 10,8 milhões no incentivo a gestores municipais com foco no atendimento de 32 milhões de adolescentes do Brasil, mesmo nos locais de mais difícil acesso! Mais informações no nosso telegram: URL"
     }
 ]
