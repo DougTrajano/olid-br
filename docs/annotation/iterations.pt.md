@@ -37,9 +37,10 @@ Também abordamos a análise considerando como um problema *multi-label* ou vár
 
 **Problem *Multi-Label***
 
-Para todos os nossos rótulos de toxicidade (`health`, `ideology`, `insult`, `lgbtqphobia`, `other_lifestyle`, `physical_aspects`, `profanity_obscene`, `racism`, `religious_intolerance`, `sexism`, `xenophobia`) calculamos o Krippendorff's alpha usando a distância MASI.
+Para todos os nossos [**rótulos de toxicidade**]{health, ideology, insult, lgbtqphobia, other_lifestyle, physical_aspects, profanity_obscene, racism, religious_intolerance, sexism, xenophobia} calculamos o Krippendorff's alpha (usando MASI distance) e o *Percent Agreement*.
 
-Obtivemos **0,1962** para o Krippendorff's alpha, que é considerado uma pequena concordância.
+**Krippendorff's alpha**: 0,1962 (pequena concordância)
+**Percent Agreement**: 0,1877
 
 **Problema binário**
 
@@ -48,6 +49,7 @@ Obtivemos **0,1962** para o Krippendorff's alpha, que é considerado uma pequena
 | **is\_offensive**          | 0,7277            | 0,0595               | 0,7750     | |
 | **is\_targeted**           | 0,1610            | \-0,1348             | \-0,1029   | [1] |
 | **targeted\_type**         | 0,0641            | 0,2461               | 0,4978     | [1] |
+| **toxic\_spans**           | 0,1220            | 0,2709               | N/A        | |
 | **health**                 | 0,9760            | 0,0447               | 0,9837     | |
 | **ideology**               | 0,7647            | 0,3019               | 0,7976     | [3] |
 | **insult**                 | 0,4713            | 0,0895               | 0,425      | [3] |
@@ -94,28 +96,29 @@ Para avaliar os rótulos de toxicidade, temos duas possíveis abordagens: Multi-
 
 **Multi-Label Problem**
 
-Para todos os nossos rótulos de toxicidade (`health`, `ideology`, `insult`, `lgbtqphobia`, `other_lifestyle`, `physical_aspects`, `profanity_obscene`, `racism`, `religious_intolerance`, `sexism`, `xenophobia`) calculamos o Krippendorff's alpha usando a MASI distance.
+Para todos os nossos [**rótulos de toxicidade**]{health, ideology, insult, lgbtqphobia, other_lifestyle, physical_aspects, profanity_obscene, racism, religious_intolerance, sexism, xenophobia} calculamos o Krippendorff's alpha (usando MASI distance) e o *Percent Agreement*.
 
-Nós obtivemos um valor de **0,4387** para o Krippendorff's alpha, que é considerado uma concordância moderada.
+**Krippendorff's alpha**: 0,4387 (concordância moderada)
+**Percent Agreement**: 0,2843
 
 **Binary Problem**
 
 | Feature / metrics          | Percent Agreement | Krippendorff's alpha | Gwet's AC<sub>1</sub> | Comments |
 | -------------------------- | :---------------: | :------------------: | :--------: | -------- |
-| **is\_offensive**          | 0.7137            | 0.2064               | 0.7487     | |
-| **is\_targeted**           | 0.4397            | 0.1415               | 0.3389     | |
-| **targeted\_type**         | 0.2611            | 0.5031               | 0.6303     | |
-| **health**                 | 0.9703            | 0.1847               | 0.9797     | |
-| **ideology**               | 0.8620            | 0.4265               | 0.8904     | |
-| **insult**                 | 0.5685            | 0.3355               | 0.4929     | |
-| **lgbtqphobia**            | 0.9683            | 0.7329               | 0.9770     | |
-| **other\_lifestyle**       | 0.9724            | 0.2612               | 0.9811     | |
-| **physical\_aspects**      | 0.9387            | 0.3605               | 0.9563     | |
-| **profanity\_obscene**     | 0.7290            | 0.5087               | 0.7144     | |
-| **racism**                 | 0.9908            | 0.3049               | 0.9938     | |
-| **religious\_intolerance** | 1.0               | 1.0                  | 1.0        | |
-| **sexism**                 | 0.9591            | 0.1531               | 0.9718     | |
-| **xenophobia**             | 0.9734            | 0.3571               | 0.9818     | |
+| **is\_offensive**          | 0,7137            | 0,2064               | 0,7487     | |
+| **is\_targeted**           | 0,4397            | 0,1415               | 0,3389     | |
+| **targeted\_type**         | 0,2611            | 0,5031               | 0,6303     | |
+| **health**                 | 0,9703            | 0,1847               | 0,9797     | |
+| **ideology**               | 0,8620            | 0,4265               | 0,8904     | |
+| **insult**                 | 0,5685            | 0,3355               | 0,4929     | |
+| **lgbtqphobia**            | 0,9683            | 0,7329               | 0,9770     | |
+| **other\_lifestyle**       | 0,9724            | 0,2612               | 0,9811     | |
+| **physical\_aspects**      | 0,9387            | 0,3605               | 0,9563     | |
+| **profanity\_obscene**     | 0,7290            | 0,5087               | 0,7144     | |
+| **racism**                 | 0,9908            | 0,3049               | 0,9938     | |
+| **religious\_intolerance** | 1,0               | 1,0                  | 1,0        | |
+| **sexism**                 | 0,9591            | 0,1531               | 0,9718     | |
+| **xenophobia**             | 0,9734            | 0,3571               | 0,9818     | |
 
 #### Comentários
 

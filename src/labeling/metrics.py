@@ -25,11 +25,20 @@ def percent_agreement(reliability_data: Union[List[List[Any]], pd.DataFrame]) ->
 
     agree_on = 0
     non_agree_on = 0
-    for annotations in zip(*reliability_data):
-        if len(set(annotations)) == 1:
-            agree_on += 1
+    for ratings in zip(*reliability_data):
+        if all(isinstance(a, list) for a in ratings):
+            ratings = [frozenset(a) for a in ratings]
+
+        # Check if all elements has the same type (except NaNs)
+        not_null_ratings = [i for i in ratings if not pd.isnull(i)]
+        if not all(isinstance(i, type(not_null_ratings[0])) for i in not_null_ratings):
+            raise ValueError("All elements must be of the same type.")
         else:
-            non_agree_on += 1
+            if len(set(ratings)) == 1:
+                agree_on += 1
+            else:
+                non_agree_on += 1
+
     return agree_on / (agree_on + non_agree_on)
 
 
