@@ -1,4 +1,3 @@
-
 import warnings
 from collections import Counter
 from typing import Any, List
@@ -29,6 +28,17 @@ def at_least_one(annotations: List[bool]):
     """
     return any(annotations)
 
+def all_true(annotations: List[bool]):
+    """Returns True if all of the annotations are True.
+
+    Args:
+    - annotations: A list of annotations.
+
+    Returns:
+    - True if all of the annotations are True.
+    """
+    return all(annotations)
+    
 def all_labeled_spans(annotations: List[Any]):
     """Returns all spans that are labeled by at least one annotator.
 

@@ -84,4 +84,49 @@ We will pass along the annotation guidelines with the annotators for the next it
 
 [![Status badge](https://img.shields.io/badge/Status-In%20Progress-yellow.svg)](https://shields.io/)
 
-In the third iteration, our goal was retrain the annotators based on the output of the previous iteration. We also replaced one of the contract worker. The annotators were requested to label more 3,000 comments.
+In the third iteration, we retrained the annotators using the output of the previous iteration. One of the annotators was replaced. The annotators were requested to label more 3,000 comments.
+
+### Inter-Rater Reliability
+
+As described in the [**Inter-Rater Reliability**](inter-rater-reliability.en.md) section, we evaluate the reliability of the annotators using a several coefficients.
+
+We also address the analysis considering as a multi-label problem or several binary problems.
+
+**Multi-Label Problem**
+
+For all our toxicity labels (`health`, `ideology`, `insult`, `lgbtqphobia`, `other_lifestyle`, `physical_aspects`, `profanity_obscene`, `racism`, `religious_intolerance`, `sexism`, `xenophobia`) we calculate the Krippendorff's alpha using the MASI distance.
+
+We got **0.4387** for the Krippendorff's alpha, which is considered as a moderate agreement.
+
+**Binary Problem**
+
+| Feature / metrics          | Percent Agreement | Krippendorff's alpha | Gwet's AC<sub>1</sub> | Comments |
+| -------------------------- | :---------------: | :------------------: | :--------: | -------- |
+| **is\_offensive**          | 0.7137            | 0.2064               | 0.7487     | |
+| **is\_targeted**           | 0.4397            | 0.1415               | 0.3389     | |
+| **targeted\_type**         | 0.2611            | 0.5031               | 0.6303     | |
+| **health**                 | 0.9703            | 0.1847               | 0.9797     | |
+| **ideology**               | 0.8620            | 0.4265               | 0.8904     | |
+| **insult**                 | 0.5685            | 0.3355               | 0.4929     | |
+| **lgbtqphobia**            | 0.9683            | 0.7329               | 0.9770     | |
+| **other\_lifestyle**       | 0.9724            | 0.2612               | 0.9811     | |
+| **physical\_aspects**      | 0.9387            | 0.3605               | 0.9563     | |
+| **profanity\_obscene**     | 0.7290            | 0.5087               | 0.7144     | |
+| **racism**                 | 0.9908            | 0.3049               | 0.9938     | |
+| **religious\_intolerance** | 1.0               | 1.0                  | 1.0        | |
+| **sexism**                 | 0.9591            | 0.1531               | 0.9718     | |
+| **xenophobia**             | 0.9734            | 0.3571               | 0.9818     | |
+
+#### Comments
+
+Pending
+
+#### Conclusions
+
+Pending
+
+<details><summary>Profiling Report</summary>
+
+<iframe width=100% height=500 frameBorder=0 src="../reports/olidbr_pilot_3.html"></iframe>
+
+</details>

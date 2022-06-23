@@ -194,3 +194,39 @@ def dict_serialize_date(data: List[Dict[Any, Any]], keys: List[Any]):
                     i[key] = i[key].isoformat()
         new_data.append(i)
     return new_data
+
+def get_lead_time(data: Dict[str, Any]):
+    """
+    Returns the lead time of the given data (Label Studio JSON format).
+
+    Args:
+    - data: A dictionary containing the data.
+
+    Returns:
+    - A list of floats representing the lead time.
+    """
+    lead_times = []
+
+    for item in data:
+        for annotation in item["annotations"]:
+            if "lead_time" in annotation.keys():
+                lead_times.append(annotation["lead_time"])
+    return lead_times
+
+def get_annotations_by_rater(ratings: Dict[str, pd.DataFrame], rater: int, item: int):
+    """Get all annotations by rater.
+
+    Args:
+    - ratings: Dictionary of ratings. e.g. {"health": health, "ideology": ideology, ...}
+    - rater: Rater ID
+    - item: Item ID
+
+    Returns:
+    - List of annotations by rater (e.g ["insult", "profanity_obscene", ...])
+    """
+    annotations = []
+    for k, v in ratings.items():
+        if rater in v.columns:
+            if v[rater].loc[item] == True:
+                annotations.append(k)
+    return annotations
