@@ -39,8 +39,8 @@ Também abordamos a análise considerando como um problema *multi-label* ou vár
 
 Para todos os nossos [**rótulos de toxicidade**]{health, ideology, insult, lgbtqphobia, other_lifestyle, physical_aspects, profanity_obscene, racism, religious_intolerance, sexism, xenophobia} calculamos o Krippendorff's alpha (usando MASI distance) e o *Percent Agreement*.
 
-**Krippendorff's alpha**: 0,1962 (pequena concordância)
-**Percent Agreement**: 0,1877
+- **Krippendorff's alpha**: 0,1962 (pequena concordância)
+- **Percent Agreement**: 0,1877
 
 **Problema binário**
 
@@ -98,8 +98,8 @@ Para avaliar os rótulos de toxicidade, temos duas possíveis abordagens: Multi-
 
 Para todos os nossos [**rótulos de toxicidade**]{health, ideology, insult, lgbtqphobia, other_lifestyle, physical_aspects, profanity_obscene, racism, religious_intolerance, sexism, xenophobia} calculamos o Krippendorff's alpha (usando MASI distance) e o *Percent Agreement*.
 
-**Krippendorff's alpha**: 0,4387 (concordância moderada)
-**Percent Agreement**: 0,2843
+- **Krippendorff's alpha**: 0,4387 (concordância moderada)
+- **Percent Agreement**: 0,2843
 
 **Binary Problem**
 

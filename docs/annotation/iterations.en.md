@@ -39,8 +39,8 @@ We also address the analysis considering as a multi-label problem or several bin
 
 For all our [**toxicity labels**]{health, ideology, insult, lgbtqphobia, other_lifestyle, physical_aspects, profanity_obscene, racism, religious_intolerance, sexism, xenophobia} we calculate the Krippendorff's alpha (using the MASI distance) and the Percent Agreement.
 
-**Krippendorff's alpha**: 0.1962 (slight agreement)
-**Percent Agreement**: 0.1877
+- **Krippendorff's alpha**: 0.1962 (slight agreement)
+- **Percent Agreement**: 0.1877
 
 **Binary Problem**
 
@@ -98,8 +98,8 @@ We also address the analysis considering as a multi-label problem or several bin
 
 For all our [**toxicity labels**]{health, ideology, insult, lgbtqphobia, other_lifestyle, physical_aspects, profanity_obscene, racism, religious_intolerance, sexism, xenophobia} we calculate the Krippendorff's alpha (using the MASI distance) and the Percent Agreement.
 
-**Krippendorff's alpha**: 0.4387 (moderate agreement)
-**Percent Agreement**: 0.2843
+- **Krippendorff's alpha**: 0.4387 (moderate agreement)
+- **Percent Agreement**: 0.2843
 
 **Binary Problem**
 
