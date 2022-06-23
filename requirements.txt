@@ -9,5 +9,5 @@ scikit-learn==1.1.1
 simpletransformers==0.63.7
 spacy==3.3.1
 spacymoji==3.0.1
-https://github.com/explosion/spacy-models/releases/download/pt_core_news_lg-3.2.0/pt_core_news_lg-3.2.0.tar.gz
+https://github.com/explosion/spacy-models/releases/download/pt_core_news_lg-3.3.0/pt_core_news_lg-3.3.0.tar.gz
 tweepy==4.10.0
