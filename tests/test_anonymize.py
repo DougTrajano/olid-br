@@ -47,7 +47,7 @@ TESTS = [
         "without_users": "Cerimônia de Lançamento do Projeto Pró-Águas Urucuia. - Arinos/MG - 17 Set 21. USER USER USER #brasil",
         "without_urls": "Cerimônia de Lançamento do Projeto Pró-Águas Urucuia. - Arinos/MG - 17 Set 21. @mdregional_br @rogeriosmarinho @govbr #brasil",
         "without_hashtags": "Cerimônia de Lançamento do Projeto Pró-Águas Urucuia. - Arinos/MG - 17 Set 21. @mdregional_br @rogeriosmarinho @govbr HASHTAG",
-        "without_names": "USER de Lançamento do Projeto USER USER. - USERUSERUSER - 17 Set 21. USER @rogeriosmarinho @govbr #USER",
+        "without_names": "USER de Lançamento do Projeto USER USER. - USERUSERUSER - 17 Set 21. USER @rogeriosmarinho @govbr USERUSER",
         "without_all": "USER de Lançamento do Projeto USER USER. - USERUSERUSER - 17 Set 21. USER USER USER HASHTAG"
     },
     {
