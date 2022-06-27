@@ -222,44 +222,23 @@ class Dataset(object):
         _logger.debug(f"Got raw texts for {len(texts)} items.")
         return texts
 
-    def get_annotations(self, texts: List[RawText], feature: str):
-        """Get all annotations for a list of texts.
+    def get_processed_texts(self, raw: List[Dict[Any, Any]],
+                            label_strategy: LabelStrategy = LabelStrategy()) -> List[ProcessedText]:
+        """Get processed texts from raw texts.
 
-        Args:
-        - texts: The list of texts to get the annotations for.
-        - feature: The feature to get the annotations for.
-
-        Returns:
-        - A dictionary of annotators and their annotations.
-            (e.g. {annotator_id: [annotation1, annotation2, ...]})
-        """
-        data = {}
-
-        for text in texts:
-            for annotation in text.annotations:
-                if annotation.annotator_id not in data.keys():
-                    data[annotation.annotator_id] = [annotation[feature]]
-                else:
-                    data[annotation.annotator_id].append(annotation[feature])
-        return data
-        
-    def build(self, raw: List[Dict[Any, Any]], label_strategy: LabelStrategy = LabelStrategy()):
-        """Process a list of label studio raw data and build the dataset.
-        
         Args:
         - raw: The raw data from the label studio.
+        - label_strategy: The label strategy.
 
         Returns:
-        - A tuple of (List[ProcessedText], List[Metadata]) objects.
+        - A list of ProcessedText objects.
         """
         _logger.debug(f"Processing {len(raw)} texts.")
-
-        raw_texts = self.get_raw_texts(raw)
 
         texts = []
         metadata = []
 
-        for text in raw_texts:
+        for text in raw:
             # Processed Text
             processed_text = ProcessedText(
                 id=text.id,
@@ -299,6 +278,45 @@ class Dataset(object):
                 annotator = [i for i in self.annotators if i.annotator_id == annotation.annotator_id][0].copy()
                 annotator.id = text.id
                 metadata.append(annotator)
-                
+
         _logger.debug("Processed all texts.")
+        return texts, metadata
+
+    def get_annotations(self, texts: List[RawText], feature: str):
+        """Get all annotations for a list of texts.
+
+        Args:
+        - texts: The list of texts to get the annotations for.
+        - feature: The feature to get the annotations for.
+
+        Returns:
+        - A dictionary of annotators and their annotations.
+            (e.g. {annotator_id: [annotation1, annotation2, ...]})
+        """
+        data = {}
+
+        for text in texts:
+            for annotation in text.annotations:
+                if annotation.annotator_id not in data.keys():
+                    data[annotation.annotator_id] = [annotation[feature]]
+                else:
+                    data[annotation.annotator_id].append(annotation[feature])
+        return data
+        
+    def build(self, raw: List[Dict[Any, Any]], label_strategy: LabelStrategy = LabelStrategy()):
+        """Process a list of label studio raw data and build the dataset.
+        
+        Args:
+        - raw: The raw data from the label studio.
+        - label_strategy: The label strategy.
+
+        Returns:
+        - A tuple of (List[ProcessedText], List[Metadata]) objects.
+        """
+        _logger.debug(f"Building the dataset for {len(raw)} items.")
+
+        raw_texts = self.get_raw_texts(raw)
+        texts, metadata = self.get_processed_texts(raw_texts, label_strategy)
+                
+        _logger.debug(f"Built the dataset for {len(texts)} items.")
         return texts, metadata
