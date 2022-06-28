@@ -61,6 +61,14 @@ You must define the following environment variables in order to run the notebook
 | `YOUTUBE_API_KEY` | YouTube API Key | `None` | Required | `YOUTUBE_MAX_COMMENTS` | YouTube Max Comments | 50 | Optional |
 | `YOUTUBE_MAX_COMMENTS_PER_VIDEO` | YouTube Max Comments per video | `None` | Optional |
 
+For training notebooks, you must also define the following environment variables:
+
+| Variable | Description | Default | Required |
+| --- | --- | --- | --- |
+| `MLFLOW_TRACKING_URI` | MLflow Tracking URI | `None` | Required |
+| `MLFLOW_TRACKING_USERNAME` | MLflow Tracking Username | `None` | Optional |
+| `MLFLOW_TRACKING_PASSWORD` | MLflow Tracking Password | `None` | Optional |
+
 The Jupyter Notebooks uses a `.env` file to read the environment variables.
 
 </p>
