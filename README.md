@@ -13,13 +13,30 @@ The dataset will be available on [Kaggle](https://www.kaggle.com/dougtrajano/oli
 
 ## Technical details
 
+This repository contains the source code to prepare, build, and publish the OLID-BR dataset.
+
+The repositorty is structured as follows:
+
+- `/docs` contains the documentation for the dataset (available [here](https://dougtrajano.github.io/olid-br/)).
+- `/notebooks/baselines` contains notebooks for baseline models.
+- `/notebooks/collecting` contains notebooks for data collection.
+- `/notebooks/exploring` contains notebooks for data exploration.
+- `/notebooks/processing` contains notebooks for data processing.
+- `/properties` contains the properties for the dataset.
+- `/src` contains the source code for the dataset.
+- `/tests` contains the tests for the dataset.
+
+<details><summary>Architecture</summary>
+<p>
+
+![](docs/images/data-pipeline.png)
+
+</p>
+</details>
+
 ### Running Notebooks
 
-To run the extraction notebooks, you must have to follow the above steps:
-
-#### Environment Variables
-
-Create a `.env` file with the following variables:
+You must define the following environment variables in order to run the notebooks:
 
 <details><summary>Environment Variables</summary>
 <p>
@@ -44,24 +61,27 @@ Create a `.env` file with the following variables:
 | `YOUTUBE_API_KEY` | YouTube API Key | `None` | Required | `YOUTUBE_MAX_COMMENTS` | YouTube Max Comments | 50 | Optional |
 | `YOUTUBE_MAX_COMMENTS_PER_VIDEO` | YouTube Max Comments per video | `None` | Optional |
 
-If `AWS_ROLE_ARN` and `AWS_WEB_IDENTITY_TOKEN_FILE` are provided, the crawler will use them to assume a role, and will not use `AWS_ACCESS_KEY_ID`, and `AWS_SECRET_ACCESS_KEY`.
+The Jupyter Notebooks uses a `.env` file to read the environment variables.
 
 </p>
 </details>
 
+If you are running the notebooks on Google Colab, you need to run the following commands:
+
+```bash
+!git clone https://github.com/DougTrajano/olid-br.git
+!mv olid-br/* .
+!rm -rf olid-br
+!pip install -r requirements.txt
+```
+
 ### Install dependencies
+
+You can install the dependencies by running the following command:
 
 ```bash
 pip install -r requirements.txt
 ```
-
-<details><summary>Architecture</summary>
-<p>
-
-![](docs/images/data-pipeline.png)
-
-</p>
-</details>
 
 ## Changelog
 
