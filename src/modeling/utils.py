@@ -83,3 +83,21 @@ def compute_pos_weight(y: np.ndarray) -> List[float]:
         negatives = len(y[:, i]) - positives
         pos_weight.append(negatives / positives)
     return pos_weight
+
+def get_labels_for_y(y: List[int], toxicity_labels: List[int]):
+    """
+    Get the toxicity labels from the y.
+
+    Args:
+    - y: List of labels.
+    - toxicity_labels: List of toxicity labels.
+
+    Returns:
+    - List of toxicity labels.
+    """
+    labels = []
+    for i in range(len(y)):
+        if y[i] == 1:
+            labels.append(toxicity_labels[i])
+    return labels
+    

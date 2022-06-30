@@ -15,3 +15,4 @@ spacymoji==3.0.1
 https://github.com/explosion/spacy-models/releases/download/pt_core_news_lg-3.3.0/pt_core_news_lg-3.3.0.tar.gz
 tweepy==4.10.0
 mlflow==1.26.1
+iterative-stratification==0.1.7

@@ -74,7 +74,7 @@ The Jupyter Notebooks uses a `.env` file to read the environment variables.
 </p>
 </details>
 
-If you are running the notebooks on Google Colab, you need to run the following commands:
+If you are running the notebooks on [Google Colab](https://colab.research.google.com/), you need to run the following commands:
 
 ```bash
 !git clone https://github.com/DougTrajano/olid-br.git
