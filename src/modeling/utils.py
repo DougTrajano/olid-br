@@ -5,7 +5,7 @@ import pandas as pd
 from typing import List, Dict, Any
 from kaggle.api.kaggle_api_extended import KaggleApi
 
-def download_dataset():
+def download_dataset(file: str = "olidbr.csv") -> pd.DataFrame:
     """Download dataset from Kaggle
 
     Returns:
@@ -19,10 +19,10 @@ def download_dataset():
         kaggle.dataset_download_files(dataset="olidbr", unzip=True)
 
     # Load data
-    df = pd.read_csv("olidbr.csv")
+    df = pd.read_csv(file)
 
     # Delete files
-    for file in ["olidbr.csv", "metadata.csv"]:
+    for file in ["olidbr.csv", "metadata.csv", "olidbr.csv.zip"]:
         if os.path.exists(file):
             os.remove(file)
     return df
