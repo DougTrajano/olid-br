@@ -2,6 +2,8 @@ import logging
 import uuid
 from typing import Any, Dict, List, Union
 
+from py import process
+
 from src.data_classes import (
     Annotation,
     Annotator,
@@ -260,6 +262,8 @@ class Dataset(object):
                 xenophobia=label_strategy.xenophobia([i.xenophobia for i in text.annotations]),
             )
 
+            processed_text = self._force_schema(processed_text)
+            
             # Origin metadata
             meta_info = Metadata(
                 id=text.id,
@@ -320,3 +324,38 @@ class Dataset(object):
                 
         _logger.debug(f"Built the dataset for {len(texts)} items.")
         return texts, metadata
+
+    def _force_schema(self, processed_text: ProcessedText):
+        """Force the OLID-BR schema for the processed text.
+        
+        Args:
+        - processed_text: The processed text to force the schema for.
+
+        Returns:
+        - The processed text with the forced schema.
+        """
+        if processed_text.is_offensive == "NOT":
+            _logger.debug(f"Removing offensive annotations for {processed_text.id}.")
+            processed_text.is_targeted = "UNT"
+            processed_text.targeted_type = None
+            processed_text.toxic_spans = None
+            processed_text.health = False
+            processed_text.ideology = False
+            processed_text.insult = False
+            processed_text.lgbtqphobia = False
+            processed_text.other_lifestyle = False
+            processed_text.physical_aspects = False
+            processed_text.profanity_obscene = False
+            processed_text.racism = False
+            processed_text.religious_intolerance = False
+            processed_text.sexism = False
+            processed_text.xenophobia = False
+
+        if (
+            processed_text.is_targeted == "UNT"
+            and processed_text.targeted_type is not None
+        ):
+            _logger.debug(f"Changing targeted type to None for {processed_text.id}.")
+            processed_text.targeted_type = None
+        
+        return processed_text
