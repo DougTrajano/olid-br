@@ -3,7 +3,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DougTrajano_olid-br&metric=alert_status)](https://sonarcloud.io/dashboard?id=DougTrajano_olid-br)
 [![](https://img.shields.io/github/license/DougTrajano/olid-br.svg)](LICENSE)
 
-Offensive Language Identification Dataset for Brazilian Portuguese (OLID-BR) is a collection of portuguese text with annotations for several NLP tasks related to toxicity/offensive language.
+Offensive Language Identification Dataset for Brazilian Portuguese (OLID-BR) is a collection of Portuguese text with annotations for several NLP tasks related to toxicity/offensive language.
 
 See the [Dataset documentation](https://dougtrajano.github.io/olid-br/) for more information.
 
@@ -15,7 +15,7 @@ The dataset will be available on [Kaggle](https://www.kaggle.com/dougtrajano/oli
 
 This repository contains the source code to prepare, build, and publish the OLID-BR dataset.
 
-The repositorty is structured as follows:
+The repository is structured as follows:
 
 - `/docs` contains the documentation for the dataset (available [here](https://dougtrajano.github.io/olid-br/)).
 - `/notebooks/baselines` contains notebooks for baseline models.
@@ -36,7 +36,7 @@ The repositorty is structured as follows:
 
 ### Running Notebooks
 
-You must define the following environment variables in order to run the notebooks:
+You must define the following environment variables to run the notebooks:
 
 <details><summary>Environment Variables</summary>
 <p>
