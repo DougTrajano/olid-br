@@ -25,7 +25,7 @@ Nesta iteração, não geramos a análise de confiabilidade entre avaliadores po
 
 ## Iteração 2
 
-[![Distintivo de status](https://img.shields.io/badge/Status-Finished-blue.svg)](https://shields.io/)
+[![Status badge](https://img.shields.io/badge/Status-Finished-blue.svg)](https://shields.io/)
 
 Na segunda iteração, introduzimos trabalhadores contratados para fazer as anotações. Os anotadores foram treinados pelo autor do conjunto de dados conforme descrito em [**Anotadores qualificados**](qualified-annotators.en.md).
 
@@ -84,7 +84,7 @@ Iremos repassar as diretrizes de anotação com os anotadores para a próxima it
 
 ## Iteração 3
 
-[![Status badge](https://img.shields.io/badge/Status-In%20Progress-yellow.svg)](https://shields.io/)
+[![Status badge](https://img.shields.io/badge/Status-Finished-blue.svg)](https://shields.io/)
 
 Na terceira iteração, nós retreinamos os anotadores com base nas lições aprendidas na iteração anterior. Também substituímos um dos anotadores contratados. Os anotadores foram solicitados a rotular mais 3.000 comentários.
 
@@ -98,38 +98,47 @@ Para avaliar os rótulos de toxicidade, temos duas possíveis abordagens: Multi-
 
 Para todos os nossos [**rótulos de toxicidade**]{health, ideology, insult, lgbtqphobia, other_lifestyle, physical_aspects, profanity_obscene, racism, religious_intolerance, sexism, xenophobia} calculamos o Krippendorff's alpha (usando MASI distance) e o *Percent Agreement*.
 
-- **Krippendorff's alpha**: 0,4387 (concordância moderada)
-- **Percent Agreement**: 0,2843
+- **Krippendorff's alpha**: 0,4653 (concordância moderada)
+- **Percent Agreement**: 0,2758
 
 **Binary Problem**
 
 | Feature / metrics          | Percent Agreement | Krippendorff's alpha | Gwet's AC<sub>1</sub> | Comments |
 | -------------------------- | :---------------: | :------------------: | :--------: | -------- |
-| **is\_offensive**          | 0,7137            | 0,2064               | 0,7487     | |
-| **is\_targeted**           | 0,4397            | 0,1415               | 0,3389     | |
-| **targeted\_type**         | 0,2611            | 0,5031               | 0,6303     | |
-| **health**                 | 0,9703            | 0,1847               | 0,9797     | |
-| **ideology**               | 0,8620            | 0,4265               | 0,8904     | |
-| **insult**                 | 0,5685            | 0,3355               | 0,4929     | |
-| **lgbtqphobia**            | 0,9683            | 0,7329               | 0,9770     | |
-| **other\_lifestyle**       | 0,9724            | 0,2612               | 0,9811     | |
-| **physical\_aspects**      | 0,9387            | 0,3605               | 0,9563     | |
-| **profanity\_obscene**     | 0,7290            | 0,5087               | 0,7144     | |
-| **racism**                 | 0,9908            | 0,3049               | 0,9938     | |
-| **religious\_intolerance** | 1,0               | 1,0                  | 1,0        | |
-| **sexism**                 | 0,9591            | 0,1531               | 0,9718     | |
-| **xenophobia**             | 0,9734            | 0,3571               | 0,9818     | |
+| **is\_offensive**          | 0.6509            | 0.1777               | 0.6754     | |
+| **is\_targeted**           | 0.3551            | 0.1072               | 0.1709     | |
+| **targeted\_type**         | 0.1975            | 0.4887               | 0.6300     | |
+| **toxic\_spans**           | 0.1757            | 0.4427               | N/A        | |
+| **health**                 | 0.9700            | 0.2641               | 0.9794     | |
+| **ideology**               | 0.8670            | 0.4728               | 0.8934     | |
+| **insult**                 | 0.5488            | 0.3317               | 0.4531     | |
+| **lgbtqphobia**            | 0.9613            | 0.6393               | 0.9722     | |
+| **other\_lifestyle**       | 0.9787            | 0.4683               | 0.9854     | |
+| **physical\_aspects**      | 0.9560            | 0.4160               | 0.9691     | |
+| **profanity\_obscene**     | 0.7089            | 0.4894               | 0.6870     | |
+| **racism**                 | 0.9913            | 0.3781               | 0.9942     | |
+| **religious\_intolerance** | 1.0               | 1.0                  | 1.0        | 1 |
+| **sexism**                 | 0.9550            | 0.1566               | 0.9689     | |
+| **xenophobia**             | 0.9847            | 0.2980               | 0.9896     | |
 
 #### Comentários
 
-Pendente
+- [1] Não temos nenhum texto marcado com `religious_intolerance` por nossos anotadores.
 
 #### Conclusões
 
-Pendente
+In this iteration, we had more consistent annotations which led to a better agreement between the annotators. Krippendorff's alpha for toxicity labels increased from **0.1962** to **0.4653**.
+
+Nesta iteração, tivemos anotações mais consistentes que levaram a uma melhor concordância entre os anotadores. O Krippendorff's alpha para rótulos de toxicidade aumentou de **0,1962** para **0,4653**.
 
 <details><summary>Profiling Report</summary>
 
 <iframe width=100% height=500 frameBorder=0 src="../reports/olidbr_pilot_3.html"></iframe>
 
 </details>
+
+## Iteration 4
+
+[![Status badge](https://img.shields.io/badge/Status-In%20Progress-yellow.svg)](https://shields.io/)
+
+Em breve.
