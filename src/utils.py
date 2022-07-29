@@ -10,7 +10,14 @@ _logger = logging.getLogger(__name__)
 
 
 def read_yaml(path: str) -> Dict[Any, Any]:
-    "Read a YAML file."
+    """Read a YAML file.
+    
+    Args:
+    - path: The path of the YAML file.
+
+    Returns:
+    - A dictionary.
+    """
     _logger.debug(f"Reading YAML file: {path}")
 
     with open(path) as file:
@@ -21,8 +28,7 @@ def read_yaml(path: str) -> Dict[Any, Any]:
 
 
 def read_json(path: str) -> Dict[Any, Any]:
-    """
-    Read a JSON file.
+    """Read a JSON file.
 
     Args:
     - path: The path of the JSON file.
@@ -39,8 +45,7 @@ def read_json(path: str) -> Dict[Any, Any]:
     return data
 
 def save_json(data: Union[Dict, List[Dict]], path: str) -> None:
-    """
-    Save data to a JSON file.
+    """Save data to a JSON file.
 
     Args:
     - data: The data to save.
@@ -54,8 +59,7 @@ def save_json(data: Union[Dict, List[Dict]], path: str) -> None:
     _logger.debug("Data saved.")
 
 def label_studio_fmt(data: RawText) -> Dict[Any, Any]:
-    """
-    Format data to the Label Studio format.
+    """Format data to the Label Studio format.
     https://labelstud.io/guide/tasks.html#Basic-Label-Studio-JSON-format
 
     "created_at" and "collected_at" will be converted to ISO 8601.
@@ -87,8 +91,7 @@ def label_studio_fmt(data: RawText) -> Dict[Any, Any]:
     return fmt_data
 
 def get_toxic_substrings(text: str, spans: List[int], verbose=False) -> List[str]:
-    """
-    Extract string words based on a list of spans.
+    """Extract string words based on a list of spans.
 
     Args:
     - text: The text to extract words from.
@@ -127,8 +130,7 @@ def get_toxic_substrings(text: str, spans: List[int], verbose=False) -> List[str
     return words
 
 def normalize_raw_text(data: List[RawText]) -> List[Dict[Any, Any]]:
-    """
-    Normalize RawText to a list of dictionaries.
+    """Normalize RawText to a list of dictionaries.
 
     Args:
     - data: A list of RawText objects.
@@ -160,8 +162,7 @@ def check_words(text: str, words: list):
     return True
     
 def prepare_data_to_px(df: pd.DataFrame):
-    """
-    Prepare the data to be used in a plotly graph.
+    """Prepare the data to be used in a plotly graph.
 
     Args:
     - data: A pandas dataframe with each column being an annotator and each row being a label.
@@ -196,8 +197,7 @@ def dict_serialize_date(data: List[Dict[Any, Any]], keys: List[Any]):
     return new_data
 
 def get_lead_time(data: Dict[str, Any]):
-    """
-    Returns the lead time of the given data (Label Studio JSON format).
+    """Returns the lead time of the given data (Label Studio JSON format).
 
     Args:
     - data: A dictionary containing the data.
@@ -230,3 +230,4 @@ def get_annotations_by_rater(ratings: Dict[str, pd.DataFrame], rater: int, item:
             if v[rater].loc[item] == True:
                 annotations.append(k)
     return annotations
+    
