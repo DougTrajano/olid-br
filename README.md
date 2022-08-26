@@ -83,6 +83,14 @@ If you are running the notebooks on [Google Colab](https://colab.research.google
 !pip install -r requirements.txt
 ```
 
+The Google Colab uses Python 3.7 which means that the `numpy`, `pandas`, and `scikit-learn` versions in the requirements.txt are not compatible, please update the requirements.txt file to the following versions:
+
+```
+numpy~=1.23.1
+pandas~=1.3.5
+scikit-learn~=1.0.2
+```
+
 ### Install dependencies
 
 You can install the dependencies by running the following command:
