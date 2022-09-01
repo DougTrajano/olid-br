@@ -1,10 +1,10 @@
 import datetime
-from typing import List, Any, Optional
+from typing import List, Optional
 from pydantic import BaseModel, Field, validator
 from .annotation import Annotation
 
 class RawText(BaseModel):
-    id: Any = Field(..., title="Text ID")
+    id: str = Field(..., title="Text ID")
     text: str = Field(..., description="Online text.")
     source: str = Field(..., description="Source of the text.")
     created_at: datetime.datetime = Field(..., description="Date of creation.")

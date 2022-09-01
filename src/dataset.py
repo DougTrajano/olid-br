@@ -2,15 +2,14 @@ import logging
 import uuid
 from typing import Any, Dict, List, Union
 
-from py import process
-
 from src.data_classes import (
     Annotation,
     Annotator,
     LabelStrategy,
     Metadata,
     ProcessedText,
-    RawText
+    RawText,
+    Text
 )
 
 _logger = logging.getLogger(__name__)
@@ -205,7 +204,7 @@ class Dataset(object):
 
         return text
 
-    def get_raw_texts(self, raw: List[Dict[Any, Any]]):
+    def get_raw_texts(self, raw: List[Dict[Any, Any]]) -> List[RawText]:
         """Get all annotations for a list of label studio raw data.
 
         Args:
@@ -224,12 +223,12 @@ class Dataset(object):
         _logger.debug(f"Got raw texts for {len(texts)} items.")
         return texts
 
-    def get_processed_texts(self, raw: List[Dict[Any, Any]],
+    def get_processed_texts(self, raw: List[RawText],
                             label_strategy: LabelStrategy = LabelStrategy()) -> List[ProcessedText]:
         """Get processed texts from raw texts.
 
         Args:
-        - raw: The raw data from the label studio.
+        - raw: The raw texts.
         - label_strategy: The label strategy.
 
         Returns:
@@ -285,6 +284,38 @@ class Dataset(object):
 
         _logger.debug("Processed all texts.")
         return texts, metadata
+
+    def get_texts(self, raw: List[RawText]) -> List[Text]:
+        """Get full texts from raw texts.
+
+        Args:
+        - raw: The RawText objects.
+        
+        Returns:
+        - A list of Text objects.
+        """
+        _logger.debug(f"Getting full texts for {len(raw)} items.")
+
+        texts = []
+        for item in raw:
+            text = Text(
+                id=item.id,
+                text=item.text,
+                metadata=Metadata(
+                id=item.id,
+                source=item.source,
+                created_at=item.created_at,
+                collected_at=item.collected_at,
+                toxicity_score=item.toxicity_score,
+                category=item.publisher_category
+                ),
+                annotations=item.annotations
+            )
+
+            texts.append(text)
+
+        _logger.debug(f"Got full texts for {len(texts)} items.")
+        return texts
 
     def get_annotations(self, texts: List[RawText], feature: str):
         """Get all annotations for a list of texts.

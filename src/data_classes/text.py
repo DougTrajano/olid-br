@@ -1,10 +1,10 @@
 import datetime
-from typing import Optional
+from typing import List, Optional
 from pydantic import BaseModel, Field, validator
+from .annotation import Annotation
 
 
 class Metadata(BaseModel):
-    id: str = Field(None, title="Unique ID for the text.")
     source: str = Field(..., title="Source/Origin")
     created_at: datetime.datetime = Field(..., title="Created at")
     collected_at: datetime.datetime = Field(..., title="Collected at")
@@ -19,3 +19,9 @@ class Metadata(BaseModel):
 
     def __getitem__(self, item):
         return getattr(self, item)
+
+class Text(BaseModel):
+    id: str = Field(..., title="Unique ID")
+    text: str = Field(..., title="Anonymized text")
+    metadata: Metadata = Field(..., title="Metadata")
+    annotations: List[Annotation] = Field([], title="Annotations")
