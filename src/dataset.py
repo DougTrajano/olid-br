@@ -1,6 +1,6 @@
 import logging
 import uuid
-from typing import Any, Dict, List, Union
+from typing import Any, Dict, List, Union, Tuple
 
 from src.data_classes import (
     Annotation,
@@ -164,7 +164,7 @@ class Dataset(object):
             spans.sort()            
         return spans
             
-    def _get(self, item: Dict[Any, Any]):
+    def _get(self, item: Dict[Any, Any]) -> RawText:
 
         text = RawText(
             id=uuid.uuid4().hex,
@@ -224,7 +224,7 @@ class Dataset(object):
         return texts
 
     def get_processed_texts(self, raw: List[RawText],
-                            label_strategy: LabelStrategy = LabelStrategy()) -> List[ProcessedText]:
+                            label_strategy: LabelStrategy = LabelStrategy()) -> Tuple[List[ProcessedText], List[Metadata]]:
         """Get processed texts from raw texts.
 
         Args:
@@ -285,7 +285,7 @@ class Dataset(object):
         _logger.debug("Processed all texts.")
         return texts, metadata
 
-    def get_texts(self, raw: List[RawText]) -> List[Text]:
+    def get_full_texts(self, raw: List[RawText]) -> List[Text]:
         """Get full texts from raw texts.
 
         Args:
@@ -337,8 +337,10 @@ class Dataset(object):
                 else:
                     data[annotation.annotator_id].append(annotation[feature])
         return data
-        
-    def build(self, raw: List[Dict[Any, Any]], label_strategy: LabelStrategy = LabelStrategy()):
+
+    def build(self,
+              raw: List[Dict[Any, Any]],
+              label_strategy: LabelStrategy = LabelStrategy()) -> Dict[str, List[ProcessedText | Metadata | Text]]:
         """Process a list of label studio raw data and build the dataset.
         
         Args:
@@ -351,10 +353,16 @@ class Dataset(object):
         _logger.debug(f"Building the dataset for {len(raw)} items.")
 
         raw_texts = self.get_raw_texts(raw)
-        texts, metadata = self.get_processed_texts(raw_texts, label_strategy)
+        processed_texts, metadata = self.get_processed_texts(raw_texts, label_strategy)
+        full_texts = self.get_full_texts(raw_texts)
                 
-        _logger.debug(f"Built the dataset for {len(texts)} items.")
-        return texts, metadata
+        _logger.debug(f"Built the dataset for {len(processed_texts)} items.")
+        
+        return {
+            "processed_texts": processed_texts,
+            "metadata": metadata,
+            "full_texts": full_texts
+        }
 
     def _force_schema(self, processed_text: ProcessedText):
         """Force the OLID-BR schema for the processed text.
