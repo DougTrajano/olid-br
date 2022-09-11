@@ -1,35 +1,42 @@
 - annotator_id: 1
   gender: male
-  year_of_birth: 1993
+  age: 28
   education_level: Bachelor's Degree
   annotator_type: Researcher
+  background: Computer Science
 - annotator_id: 32
   gender: female
-  year_of_birth: 1991
+  age: 30
   education_level: Bachelor's Degree
   annotator_type: Volunteer
+  background: Social Science
 - annotator_id: 127
   gender: female
-  year_of_birth: 1975
+  age: 47
   education_level: Master's Degree
   annotator_type: Contract Worker
+  background: Social Science
 - annotator_id: 128
   gender: female
-  year_of_birth: 1992
+  age: 30
   education_level: Master's Degree
   annotator_type: Contract Worker
+  background: Social Science
 - annotator_id: 126
   gender: male
-  year_of_birth: 1997
+  age: 25
   education_level: High School
   annotator_type: Contract Worker
+  background: Computer Science
 - annotator_id: 260
   gender: female
-  year_of_birth: 2001
+  age: 21
   education_level: High School
   annotator_type: Contract Worker
+  background: Computer Science
 - annotator_id: 504
   gender: female
-  year_of_birth: 1999
+  age: 23
   education_level: High School
   annotator_type: Contract Worker
+  background: Computer Science

@@ -4,10 +4,11 @@ from pydantic import BaseModel, Field, validator
 class Annotator(BaseModel):
     id: Optional[str] = Field(None, title="Unique ID for the text")
     annotator_id: int = Field(..., title="Unique ID for the annotator")
-    gender: str = Field(..., title="Annotator Gender")
-    year_of_birth: int = Field(..., title="Year of birth of the annotator")
-    education_level: str = Field(..., title="Annotator education level")
-    annotator_type: str = Field(..., title="Annotator type")
+    gender: str = Field(..., title="Annotator's Gender")
+    age: int = Field(..., title="Annotator's Age")
+    education_level: str = Field(..., title="Annotator's education level")
+    annotator_type: str = Field(..., title="Annotator's type")
+    background: str = Field(..., title="Annotator's background")
 
     @validator("gender")
     def annotator_gender(cls, v):
