@@ -1,5 +1,5 @@
 PyYAML~=6.0
-boto3~=1.24.52
+boto3~=1.24.75
 google_api_python_client~=2.55.0
 https://github.com/explosion/spacy-models/releases/download/pt_core_news_lg-3.4.0/pt_core_news_lg-3.4.0.tar.gz
 instagram_scraper~=1.11.0
