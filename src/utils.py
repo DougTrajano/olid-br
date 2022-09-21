@@ -81,7 +81,8 @@ def label_studio_fmt(data: RawText) -> Dict[Any, Any]:
                 "created_at": data.created_at.isoformat(),
                 "collected_at": data.collected_at.isoformat(),
                 "is_toxic": data.is_toxic,
-                "toxicity_score": data.toxicity_score
+                "toxicity_score": data.toxicity_score,
+                "category": data.publisher_category
             }
         }
     }
