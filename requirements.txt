@@ -5,7 +5,7 @@ https://github.com/explosion/spacy-models/releases/download/pt_core_news_lg-3.4.
 instagram_scraper~=1.11.0
 iterative_stratification~=0.1.7
 kaggle~=1.5.12
-mlflow~=1.28.0
+mlflow~=1.29.0
 numpy~=1.23.3
 pandas~=1.5.0
 pydantic~=1.10.2
