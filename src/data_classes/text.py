@@ -1,5 +1,5 @@
 import datetime
-from typing import List, Optional
+from typing import List
 from pydantic import BaseModel, Field, validator
 from .annotation import Annotation
 
@@ -9,7 +9,9 @@ class Metadata(BaseModel):
     created_at: datetime.datetime = Field(..., title="Created at")
     collected_at: datetime.datetime = Field(..., title="Collected at")
     toxicity_score: float = Field(..., title="Toxicity score")
-    category: Optional[str] = Field(None, title="Category")
+    
+    # Disabled due to a bug in the ingestion data
+    # category: Optional[str] = Field(None, title="Category")
 
     @validator("toxicity_score")
     def metadata_toxicity_score(cls, v):

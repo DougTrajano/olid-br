@@ -19,4 +19,5 @@ class AppSettings(BaseSettings):
     YOUTUBE_API_KEY: str = Field(None, description="Youtube API Key")
     YOUTUBE_MAX_COMMENTS: int = Field(50, description="Max comments per video")
     YOUTUBE_MAX_COMMENTS_PER_VIDEO: int = Field(None, description="Max comments per video")
+    HUGGINGFACE_HUB_TOKEN: str = Field(None, description="HuggingFace Hub Token")
     

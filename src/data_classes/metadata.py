@@ -4,12 +4,14 @@ from pydantic import BaseModel, Field, validator
 
 
 class Metadata(BaseModel):
-    id: str = Field(None, title="Unique ID for the text.")
+    id: Optional[str] = Field(None, title="Unique ID for the text.")
     source: str = Field(..., title="Source/Origin")
     created_at: datetime.datetime = Field(..., title="Created at")
     collected_at: datetime.datetime = Field(..., title="Collected at")
     toxicity_score: float = Field(..., title="Toxicity score")
-    category: Optional[str] = Field(None, title="Category")
+
+    # Disabled due to a bug in the ingestion data
+    # category: Optional[str] = Field(None, title="Category")
 
     @validator("toxicity_score")
     def metadata_toxicity_score(cls, v):
