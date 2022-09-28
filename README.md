@@ -101,7 +101,7 @@ pip install -r requirements.txt
 
 ## Changelog
 
-See the [GitHub Releases](https://github.com/DougTrajano/toxicity-crawler/releases) page for a history of notable changes to this project.
+See the [GitHub Releases](https://github.com/DougTrajano/olid-br/releases) page for a history of notable changes to this project.
 
 ## License
 
