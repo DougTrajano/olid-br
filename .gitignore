@@ -130,5 +130,6 @@ dmypy.json
 
 # Temp files
 temp_*
+*temp/
 
 doug-311118-svc-acc.json

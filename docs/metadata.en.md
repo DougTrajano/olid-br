@@ -33,9 +33,3 @@ For each comment, we collect contextual information based on the social media po
 - `created_at` The date and time of the post.
 - `collected_at` The date and time of the collection.
 - `toxicity_score` The toxicity score of the comment.
-- `category` The category of the publisher.
-    - Company, Organization or Institution
-    - Entertainment
-    - Government
-    - News
-    - Politics

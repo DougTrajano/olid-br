@@ -105,4 +105,6 @@ See the [GitHub Releases](https://github.com/DougTrajano/olid-br/releases) page 
 
 ## License
 
-The project is licensed under the [Apache 2.0 License](LICENSE).
+The source code is licensed under the [Apache 2.0 License](LICENSE).
+
+The dataset is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).

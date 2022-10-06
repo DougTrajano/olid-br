@@ -5,6 +5,10 @@ summary: Offensive Language Identification Dataset for Brazilian Portuguese.
 
 # OLID-BR
 
+Offensive Language Identification Dataset for Brazilian Portuguese (OLID-BR) is a dataset with multi-task annotations for the detection of offensive language.
+
+The current version (v1.0) contains 7,943 comments from different sources, including social media (YouTube and Twitter) and related datasets.
+
 OLID-BR contains a collection of annotated sentences in Brazilian Portuguese using an annotation model that encompasses the following levels:
 
 - [[Offensive content detection](#offensive-content-detection)]{Detect offensive content in sentences and categorize it.|top-right}
@@ -13,7 +17,7 @@ OLID-BR contains a collection of annotated sentences in Brazilian Portuguese usi
 
 <figure>
   <img src="images/olid-br-taxonomy.png"/>
-  <figcaption>Hierarchical taxonomy for categorizing offensive language, proposed by author.</figcaption>
+  <figcaption>Hierarchical taxonomy for categorizing offensive language. Proposed by author, adapted from <a href="https://arxiv.org/abs/1902.09666" target="_blank">Zampieri et al. (2019)</a>.</figcaption>
 </figure>
 
 ## Categorization
@@ -24,18 +28,18 @@ This level is used to detect offensive content in the sentence.
 
 **Is this text offensive?**
 
-We use the [[Perspective API](https://www.perspectiveapi.com/)]{Perspective API is the product of a collaborative research effort by Jigsaw and Google's Counter Abuse Technology team.|top-right} to detect if the sentence contains offensive content with double-check by our [qualified annotators](annotation/index.en.md#who-are-qualified-annotators).
+We use the [[Perspective API](https://www.perspectiveapi.com/)]{Perspective API is the product of a collaborative research effort by Jigsaw and Google's Counter Abuse Technology team.|top-right} to detect if the sentence contains offensive content with double-checking by our [qualified annotators](annotation/index.en.md#who-are-qualified-annotators).
 
 - `OFF` Offensive: Inappropriate language, insults, or threats.
 - `NOT` Not offensive: No offense or profanity.
 
 **Which kind of offense does it contain?**
 
-The following labels was tagged by our annotators:
+The following labels were tagged by our annotators:
 
 `Health`, `Ideology`, `Insult`, `LGBTQphobia`, `Other-Lifestyle`, `Physical Aspects`, `Profanity/Obscene`, `Racism`, `Religious Intolerance`, `Sexism`, and `Xenophobia`.
 
-See the [Glossary](glossary.en.md) for detailed explanation.
+See the [Glossary](glossary.en.md) for further information.
 
 ### Offense target identification
 
@@ -54,7 +58,7 @@ This level is used to detect if an offensive sentence is targeted to a person or
 
 ### Offensive spans identification
 
-As toxic span we define a sequence of words that attribute to the text's toxicity.
+As toxic span, we define a sequence of words that attribute to the text's toxicity.
 
 For example, let's consider the following text:
 
@@ -68,7 +72,7 @@ The toxic spans are:
 
 ## OLID (English)
 
-The OLID (with english comments) was a reference dataset for OLID-BR. It contains 14,100 annotate tweets using a hierarchical annotation. Each instance contains up to 3 labels each corresponding to one of the following levels:
+The OLID (with English comments) was a reference dataset for OLID-BR. It contains 14,100 annotate tweets using a hierarchical annotation. Each instance contains up to 3 labels each corresponding to one of the following levels:
 
 - Level A: Offensive Language Detection
 - Level B: Categorization of Offensive Language
@@ -76,14 +80,14 @@ The OLID (with english comments) was a reference dataset for OLID-BR. It contain
 
 <figure>
   <img src="images/olid-en-taxonomy.png"/>
-  <figcaption>The three-level hierarchical taxonomy for categorizing offensive language, proposed by <a href="https://arxiv.org/abs/1902.09666" target="_blank">Zampieri et al. (2019)</a>.</figcaption>
+  <figcaption>The three-level hierarchical taxonomy for categorizing offensive language. Proposed by <a href="https://arxiv.org/abs/1902.09666" target="_blank">Zampieri et al. (2019)</a>.</figcaption>
 </figure>
 
 OLID was used in the [OffensEval: Identifying and Categorizing Offensive Language in Social Media (SemEval 2019 - Task 6)](https://competitions.codalab.org/competitions/20011) shared task.
 
 ### How dataset was generated?
 
-The examples was retrieved from Twitter using the [Twitter API](https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets) and searching for keywords and constructions that are often included in offensive messages, see the table below for the list of keywords:
+The examples were retrieved from Twitter using the [Twitter API](https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets) and searching for keywords and constructions that are often included in offensive messages, see the table below for the list of keywords:
 
 | Keyword | Offensive % |
 | :-----: | :---------: |
@@ -101,11 +105,11 @@ The examples was retrieved from Twitter using the [Twitter API](https://develope
 | MAGA | 27.7 |
 | liberals | 38.0 |
 
-The keyword that resulted in the highest concentration of offensive content was the Twitter "safe" filter, corresponding to tweets that were flagged as unsafe by Twitter (the "-" symbiol indicates "not safe").
+The keyword that resulted in the highest concentration of offensive content was the Twitter "safe" filter, corresponding to tweets that were flagged as unsafe by Twitter (the "-" symbol indicates "not safe").
 
-The dataset was annotated using crowdsourcing. The gold labels were assigned taking the agreement of three annotators into consideration. No correction has been carried out on the crowdsourcing annotations.
+The dataset was annotated using crowdsourcing. The gold labels were assigned considering the agreement of three annotators. No correction has been carried out on the crowdsourcing annotations.
 
-Twitter user mentions were substituted by @USER and URLs have been substitute by URL.
+Twitter user mentions were substituted by @USER and URLs have been substituted by URL.
 
 ### Data summary
 
