@@ -3,7 +3,6 @@ from langdetect import detect
 from google.cloud import translate
 from lingua import LanguageDetectorBuilder
 
-
 class LanguageDetector(object):
     def __init__(self, google_project_id: str = "doug-311118"):
         """Initialize the language detection class.
