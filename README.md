@@ -43,31 +43,24 @@ You must define the following environment variables to run the notebooks:
 
 | Variable | Description | Default | Required |
 | --- | --- | --- | --- |
-| `AWS_ROLE_ARN` | AWS Role ARN | `None` | Optional |
-| `AWS_WEB_IDENTITY_TOKEN_FILE` | AWS Web Identity Token File | `None` | Optional |
 | `AWS_ACCESS_KEY_ID` | AWS Access Key ID | `None` | Optional |
-| `AWS_SECRET_ACCESS_KEY` | AWS Secret Access Key | `None` | Optional |
-| `AWS_S3_BUCKET` | AWS S3 Bucket | `None` | Required |
 | `AWS_S3_BUCKET_PREFIX` | AWS S3 Bucket Prefix | `None` | Required |
+| `AWS_S3_BUCKET` | AWS S3 Bucket | `None` | Required |
+| `AWS_SECRET_ACCESS_KEY` | AWS Secret Access Key | `None` | Optional |
+| `FILTER_TOXIC_COMMENTS` | Filter Toxic Comments | `True` | Optional |
+| `HUGGINGFACE_HUB_TOKEN` | HuggingFace Hub Token | `None` | Required |
+| `KAGGLE_KEY` | Kaggle Key | `None` | Required |
+| `KAGGLE_USERNAME` | Kaggle Username | `None` | Required |
 | `LOG_LEVEL` | Log level | `INFO` | Optional |
 | `PERSPECTIVE_API_KEY` | Perspective API Key | `None` | Required |
 | `PERSPECTIVE_THRESHOLD` | Perspective Threshold | `0.5` | Optional |
-| `FILTER_TOXIC_COMMENTS` | Filter Toxic Comments | `True` | Optional |
-| `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | `None` | Required |
-| `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret | `None` | Required |
 | `TWITTER_ACCESS_TOKEN` | Twitter Access Token | `None` | Required |
 | `TWITTER_ACCESS_TOKEN_SECRET` | Twitter Access Token Secret | `None` | Required |
+| `TWITTER_CONSUMER_KEY` | Twitter Consumer Key | `None` | Required |
+| `TWITTER_CONSUMER_SECRET` | Twitter Consumer Secret | `None` | Required |
 | `TWITTER_MAX_TWEETS` | Twitter Max Tweets or replies | `None` | Required |
 | `YOUTUBE_API_KEY` | YouTube API Key | `None` | Required | `YOUTUBE_MAX_COMMENTS` | YouTube Max Comments | 50 | Optional |
 | `YOUTUBE_MAX_COMMENTS_PER_VIDEO` | YouTube Max Comments per video | `None` | Optional |
-
-For training notebooks, you must also define the following environment variables:
-
-| Variable | Description | Default | Required |
-| --- | --- | --- | --- |
-| `MLFLOW_TRACKING_URI` | MLflow Tracking URI | `None` | Required |
-| `MLFLOW_TRACKING_USERNAME` | MLflow Tracking Username | `None` | Optional |
-| `MLFLOW_TRACKING_PASSWORD` | MLflow Tracking Password | `None` | Optional |
 
 The Jupyter Notebooks uses a `.env` file to read the environment variables.
 
