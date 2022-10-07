@@ -2,14 +2,11 @@
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DougTrajano_olid-br&metric=alert_status)](https://sonarcloud.io/dashboard?id=DougTrajano_olid-br)
 [![](https://img.shields.io/github/license/DougTrajano/olid-br.svg)](LICENSE)
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 
 Offensive Language Identification Dataset for Brazilian Portuguese (OLID-BR) is a collection of Portuguese text with annotations for several NLP tasks related to toxicity/offensive language.
 
 See the [Dataset documentation](https://dougtrajano.github.io/olid-br/) for more information.
-
-## Usage
-
-The dataset will be available on [Kaggle](https://www.kaggle.com/dougtrajano/olidbr).
 
 ## Technical details
 
