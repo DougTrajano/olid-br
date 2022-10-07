@@ -1,19 +1,14 @@
 # Data Pipeline
 
-In this section, we will describe the [**data pipeline**]{A data pipeline is a series of data processing steps.} used to generate the dataset.
+In this section, we describe the [**data pipeline**]{A data pipeline is a series of data processing steps.} used to generate the dataset.
 
 ## Data Source
 
-We want to collect comments from different sources, such as:
+We collected comments from different sources, such as [**Twitter**]{Twitter is a microblogging and social networking service.}, [**YouTube**]{YouTube is a video-sharing website.}, and related datasets.
 
-- Instagram
-- Facebook
-- Twitter
-- Twitch
+For each social media (Twitter and YouTube), we defined a set of public profiles that we considered relevant to the topic.
 
-For each source, we defined a set of public profiles that we want to collect comments from. To maintain privacy, we won't share the profile names.
-
-Additionally, we will use comments from others datasets, such as:
+Additionally, we used Brazilian texts from other datasets, such as:
 
 - [rogersdepelle/OffComBR: Here we provide a data set of web comments which have been annotated for hate speech.](https://github.com/rogersdepelle/OffComBR)
 - [paulafortuna/Portuguese-Hate-Speech-Dataset: A Hierarchically-Labeled Portuguese Hate Speech Dataset](https://github.com/paulafortuna/Portuguese-Hate-Speech-Dataset)

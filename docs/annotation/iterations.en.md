@@ -137,6 +137,53 @@ In this iteration, we had more consistent annotations which led to a better agre
 
 ## Iteration 4
 
-[![Status badge](https://img.shields.io/badge/Status-In%20Progress-yellow.svg)](https://shields.io/)
+[![Status badge](https://img.shields.io/badge/Status-Finished-blue.svg)](https://shields.io/)
 
-Coming soon.
+In the fourth iteration, we asked the annotators to label a higher number of texts following the same guidelines of the previous iterations. We fixed the deadline to Oct 4th, 2022 (+- one month).
+
+### Inter-Rater Reliability
+
+As described in the [**Inter-Rater Reliability**](inter-rater-reliability.en.md) section, we evaluate the reliability of the annotators using several coefficients.
+
+We also address the analysis by considering it as a multi-label problem or several binary problems.
+
+**Multi-Label Problem**
+
+For all our [**toxicity labels**]{health, ideology, insult, lgbtqphobia, other_lifestyle, physical_aspects, profanity_obscene, racism, religious_intolerance, sexism, xenophobia} we calculate the Krippendorff's alpha (using the MASI distance) and the Percent Agreement.
+
+- **Krippendorff's alpha**: 0.4424 (moderate agreement)
+- **Percent Agreement**: 0.2769
+
+**Binary Problem**
+
+| Feature / metrics          | Percent Agreement | Krippendorff's alpha | Gwet's AC<sub>1</sub> | Comments |
+| -------------------------- | :---------------: | :--------------------: | :--------: | -------- |
+| **is\_offensive**          | 0.5847            | 0.2174                 | 0.5716     | |
+| **is\_targeted**           | 0.4253            | 0.1825                 | 0.2790     | |
+| **targeted\_type**         | 0.2223            | 0.4840                 | 0.5756     | |
+| **toxic\_spans**           | 0.2249            | 0.4760 (MASI distance) | N/A        | |
+| **health**                 | 0.9800            | 0.1424                 | 0.9865     | |
+| **ideology**               | 0.8531            | 0.2909                 | 0.8863     | |
+| **insult**                 | 0.4938            | 0.2923                 | 0.3549     | |
+| **lgbtqphobia**            | 0.9550            | 0.4901                 | 0.9681     | |
+| **other\_lifestyle**       | 0.9705            | 0.2239                 | 0.9798     | |
+| **physical\_aspects**      | 0.9570            | 0.3623                 | 0.9700     | |
+| **profanity\_obscene**     | 0.7436            | 0.5530                 | 0.7233     | |
+| **racism**                 | 0.9940            | 0.2481                 | 0.9960     | |
+| **religious\_intolerance** | 1.0               | 1.0                    | 1.0        | 1 |
+| **sexism**                 | 0.9640            | 0.1880                 | 0.9753     | |
+| **xenophobia**             | 0.9905            | 0.3840                 | 0.9936     | |
+
+#### Comments
+
+- [1] We don't have any text tagged with `religious_intolerance` by our annotators in this iteration.
+
+#### Conclusions
+
+As in the previous iteration, we had more consistent annotations which led to a better agreement between the annotators.
+
+<details><summary>Profiling Report</summary>
+
+<iframe width=100% height=500 frameBorder=0 src="../reports/olidbr_pilot_4.html"></iframe>
+
+</details>

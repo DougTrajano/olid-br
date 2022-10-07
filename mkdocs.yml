@@ -53,7 +53,6 @@ nav:
     - Qualified Annotators: annotation/qualified-annotators.en.md
     - Schema: annotation/schema.en.md
   - Data Pipeline: data-pipeline.en.md
-  - Metadata: metadata.en.md
   - Glossary: glossary.en.md
 
 plugins:
