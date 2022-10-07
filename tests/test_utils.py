@@ -15,23 +15,25 @@ from src.utils import (
 now = datetime.datetime.now()
 
 TESTS = [
-    (RawText(id=1,
-          text="Text sequence",
-          source="Twitter",
-          created_at=now,
-          collected_at=now,
-          is_toxic=False,
-          toxicity_score=0.01),
+    (RawText(
+        id=1,
+        text="Text sequence",
+        source="Twitter",
+        created_at=now,
+        collected_at=now,
+        is_toxic=False,
+        toxicity_score=0.01),
      {
         "data": {
             "text": "Text sequence",
-            "ref_id": 1,
+            "ref_id": '1',
             "meta_info": {
                     "source": "Twitter",
                     "created_at": now.isoformat(),
                     "collected_at": now.isoformat(),
                     "is_toxic": False,
-                    "toxicity_score": 0.01
+                    "toxicity_score": 0.01,
+                    "category": None
             }
         }
     })
@@ -78,6 +80,11 @@ def test_save_json():
     data = read_yaml("properties/application.yaml")
     save_json(data, "properties/application.json")
     assert type(read_json('properties/application.json')) == dict
+
+    # Delete JSON file
+    import os
+    os.remove("properties/application.json")
+
     print(f"TEST OK for src.utils.save_json")
 
 @pytest.mark.parametrize("value, output", TESTS)

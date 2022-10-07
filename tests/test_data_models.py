@@ -13,17 +13,19 @@ ANNOTATORS = [
         "id": "123456789",
         "annotator_id": 1,
         "gender": "Male",
-        "year_of_birth": 1993,
+        "age": 31,
         "education_level": "high school",
         "annotator_type": "volunteer",
+        "background": "Social Science",
     },
     {
         "id": "987654321",
         "annotator_id": 2,
         "gender": "Female",
-        "year_of_birth": 1991,
+        "age": 29,
         "education_level": "bachelor's degree",
-        "annotator_type": "researcher"
+        "annotator_type": "researcher",
+        "background": "Computer Science"
     }
 ]
 
