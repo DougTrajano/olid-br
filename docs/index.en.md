@@ -7,7 +7,7 @@ summary: Offensive Language Identification Dataset for Brazilian Portuguese.
 
 Offensive Language Identification Dataset for Brazilian Portuguese (OLID-BR) is a dataset with multi-task annotations for the detection of offensive language.
 
-The current version (v1.0) contains 7,943 comments from different sources, including social media (YouTube and Twitter) and related datasets.
+The current version (v1.0) contains **7,943** comments from different sources, including social media (YouTube and Twitter) and related datasets.
 
 OLID-BR contains a collection of annotated sentences in Brazilian Portuguese using an annotation model that encompasses the following levels:
 
@@ -22,7 +22,7 @@ OLID-BR contains a collection of annotated sentences in Brazilian Portuguese usi
 
 ## Categorization
 
-### Offensive content detection
+### Offensive Content Detection
 
 This level is used to detect offensive content in the sentence.
 
@@ -41,7 +41,7 @@ The following labels were tagged by our annotators:
 
 See the [Glossary](glossary.en.md) for further information.
 
-### Offense target identification
+### Offense Target Identification
 
 This level is used to detect if an offensive sentence is targeted to a person or group of people.
 
@@ -56,9 +56,9 @@ This level is used to detect if an offensive sentence is targeted to a person or
 - `GRP` The offense targets a group of people based on ethnicity, gender, sexual
 - `OTH` The target can belong to other categories, such as an organization, an event, an issue, etc.
 
-### Offensive spans identification
+### Offensive Spans Identification
 
-As toxic span, we define a sequence of words that attribute to the text's toxicity.
+As toxic spans, we define a sequence of words that attribute to the text's toxicity.
 
 For example, let's consider the following text:
 
@@ -70,57 +70,67 @@ The toxic spans are:
 [5, 6, 7, 8, 9, 10, 11, 12, 13]
 ```
 
-## OLID (English)
+## Dataset Structure
 
-The OLID (with English comments) was a reference dataset for OLID-BR. It contains 14,100 annotate tweets using a hierarchical annotation. Each instance contains up to 3 labels each corresponding to one of the following levels:
+### Data Instances
 
-- Level A: Offensive Language Detection
-- Level B: Categorization of Offensive Language
-- Level C: Offensive Language Target Identification
+Each instance is a social media comment with a corresponding ID and annotations for all the tasks described below.
 
-<figure>
-  <img src="images/olid-en-taxonomy.png"/>
-  <figcaption>The three-level hierarchical taxonomy for categorizing offensive language. Proposed by <a href="https://arxiv.org/abs/1902.09666" target="_blank">Zampieri et al. (2019)</a>.</figcaption>
-</figure>
+### Data Fields
 
-OLID was used in the [OffensEval: Identifying and Categorizing Offensive Language in Social Media (SemEval 2019 - Task 6)](https://competitions.codalab.org/competitions/20011) shared task.
+The simplified configuration includes:
 
-### How dataset was generated?
+- `id`: ID of the comment.
+- `text`: Text of the comment.
+- `is_offensive`: Whether the comment is offensive or not.
+- `is_targeted`: Whether the comment is targeted or not.
+- `targeted_type`: Type of the target (individual, group, or other). Only available if `is_targeted` is `True`.
+- `toxic_spans`: List of toxic spans.
+- `health`: Whether the comment contains health-related toxicity.
+- `ideology`: Whether the comment contains ideology-related toxicity.
+- `insult`: Whether the comment contains insult-related toxicity.
+- `lgbtqphobia`: Whether the comment contains lgbtqphobia-related toxicity.
+- `other_lifestyle`: Whether the comment contains other_lifestyle-related toxicity.
+- `physical_aspects`: Whether the comment contains physical_aspects-related toxicity.
+- `profanity_obscene`: Whether the comment contains profanity-related toxicity.
+- `racism`: Whether the comment contains racism-related toxicity.
+- `religious_intolerance`: Whether the comment contains religious_intolerance-related toxicity.
+- `sexism`: Whether the comment contains sexism-related toxicity.
+- `xenophobia`: Whether the comment contains xenophobia-related toxicity.
 
-The examples were retrieved from Twitter using the [Twitter API](https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets) and searching for keywords and constructions that are often included in offensive messages, see the table below for the list of keywords:
+See the [**Get Started**](get-started.en.md) page for more information.
 
-| Keyword | Offensive % |
-| :-----: | :---------: |
-| medical marijuana | 0.0 |
-| they are | 5.9 |
-| to:NewYorker | 8.3 |
-| you are | 21.0 |
-| she is | 26.6 |
-| to:BreitBartNews | 31.6 |
-| he is | 32.4 |
-| gun control | 34.7 |
-| -filter:safe | 58.9 |
-| conservatives | 23.2 |
-| antifa | 26.7 |
-| MAGA | 27.7 |
-| liberals | 38.0 |
+## Considerations for Using the Data
 
-The keyword that resulted in the highest concentration of offensive content was the Twitter "safe" filter, corresponding to tweets that were flagged as unsafe by Twitter (the "-" symbol indicates "not safe").
+### Social Impact of Dataset
 
-The dataset was annotated using crowdsourcing. The gold labels were assigned considering the agreement of three annotators. No correction has been carried out on the crowdsourcing annotations.
+Toxicity detection is a worthwhile problem that can ensure a safer online environment for everyone.
 
-Twitter user mentions were substituted by @USER and URLs have been substituted by URL.
+However, toxicity detection algorithms have focused on English and do not consider the specificities of other languages.
 
-### Data summary
+This is a problem because the toxicity of a comment can be different in different languages.
 
-| A | B | C | Training | Test | Total |
-| : | : | : | :------: | :--: | :---: |
-| OFF | TIN | IND | 2,407 | 100 | 2,507 |
-| OFF | TIN | OTH | 395 | 35 | 430 |
-| OFF | TIN | GRP | 1,074 | 78 | 1,152 |
-| OFF | UNT | — | 524 | 27 | 551 |
-| NOT | — | — | 8,840 | 620 | 9,460 |
-| All | | | 13,240 | 860 | 14,100 |
+Additionally, the toxicity detection algorithms focus on the binary classification of a comment as toxic or not toxic.
+
+Therefore, we believe that the OLID-BR dataset can help to improve the performance of toxicity detection algorithms in Brazilian Portuguese.
+
+### Discussion of Biases
+
+We are aware that the dataset contains biases and is not representative of global diversity.
+
+We are aware that the language used in the dataset could not represent the language used in different contexts.
+
+Potential biases in the data include: Inherent biases in the social media and user base biases, the offensive/vulgar word lists used for data filtering, and inherent or unconscious bias in the assessment of offensive identity labels.
+
+All these likely affect labeling, precision, and recall for a trained model.
+
+## Citation
+
+Pending
+
+## References
+
+The OLID-BR dataset is based on the OLID dataset proposed by Zampieri et al. (2019)[^1] and other related works.
 
 [^1]: Zampieri et al. "Predicting the type and target of offensive posts in social media." NAACL 2019.
 [^2]: João A. Leite, Diego F. Silva, Kalina Bontcheva, Carolina Scarton (2020): Toxic Language Detection in Social Media for Brazilian Portuguese: New Dataset and Multilingual Analysis. Published at AACL-IJCNLP 2020.

@@ -4,16 +4,11 @@ Nessa página, nós vamos descrever a [**pipeline de dados**]{A data pipeline é
 
 ## Fonte de dados
 
-Nós queremos coletar comentários de várias fontes, como:
+Coletamos comentários de diferentes fontes, como [**Twitter**]{Twitter is a microblogging and social networking service.}, [**YouTube**]{YouTube is a video-sharing website.} e conjuntos de dados relacionados.
 
-- Instagram
-- Facebook
-- Twitter
-- Twitch
+Para cada rede social (Twitter e YouTube), definimos um conjunto de perfis públicos que consideramos relevantes para o tema.
 
-Para cada fonte, definimos um conjunto de perfis públicos que queremos coletar comentários.
-
-Adicionalmente, vamos usar comentários de outros datasets, como:
+Além disso, usamos textos em Português do Brasil de outros conjuntos de dados, como:
 
 - [rogersdepelle/OffComBR: Here we provide a data set of web comments which have been annotated for hate speech.](https://github.com/rogersdepelle/OffComBR)
 - [paulafortuna/Portuguese-Hate-Speech-Dataset: A Hierarchically-Labeled Portuguese Hate Speech Dataset](https://github.com/paulafortuna/Portuguese-Hate-Speech-Dataset)
