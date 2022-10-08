@@ -39,7 +39,7 @@ The following labels were tagged by our annotators:
 
 `Health`, `Ideology`, `Insult`, `LGBTQphobia`, `Other-Lifestyle`, `Physical Aspects`, `Profanity/Obscene`, `Racism`, `Religious Intolerance`, `Sexism`, and `Xenophobia`.
 
-See the [Glossary](glossary.en.md) for further information.
+See the [**Glossary**](glossary.en.md) for further information.
 
 ### Offense Target Identification
 

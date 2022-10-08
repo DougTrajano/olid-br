@@ -24,7 +24,8 @@ kaggle.dataset_download_files(dataset="olidbr", unzip=True)
 You can see the OLID-BR dataset on [dougtrajano/olid-br · Datasets at Hugging Face](https://huggingface.co/datasets/dougtrajano/olid-br).
 
 ```python
-# pending
+from datasets import load_dataset
+dataset = load_dataset("dougtrajano/olid-br")
 ```
 
 ## Dataset Files
