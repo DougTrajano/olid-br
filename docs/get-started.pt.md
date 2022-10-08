@@ -51,23 +51,23 @@ Hugging Face tem apenas os arquivos train (`train.csv`) e test (`test.csv`).
 
 Os arquivos **CSV** são codificados em UTF-8 e possuem as seguintes colunas:
 
-- `id`: identificador único da instância.
-- `text`: texto da instância.
-- `is_offensive`: rótulo binário que indica se o texto é ofensivo ou não.
-- `is_targeted`: rótulo binário que indica se o texto é direcionado a uma pessoa ou não.
-- `targeted_type`: Tipo de alvo (individual, group, or other). Aplicável apenas se `is_targeted` for `True`.
-- `toxic_spans`: Lista de spans tóxicos.
-- `health`: rótulo binário que indica se o texto possui ou não conteúdo tóxico relacionado à saúde.
-- `ideology`: rótulo binário que indica se o texto possui ou não conteúdo tóxico relacionado à ideologia.
-- `insult`: rótulo binário que indica se o texto possui ou não conteúdo tóxico relacionado a insultos.
-- `lgbtqphobia`: rótulo binário que indica se o texto possui ou não conteúdo tóxico relacionado à LGBTQ+phobia.
-- `other_lifestyle`: rótulo binário que indica se o texto possui ou não conteúdo tóxico relacionado a diferentes estilos de vida.
-- `physical_aspects`: rótulo binário que indica se o texto possui ou não conteúdo tóxico relacionado a aspectos físicos.
-- `profanity_obscene`: rótulo binário que indica se o texto possui ou não palavrões ou conteúdo obsceno.
-- `racism`: rótulo binário que indica se o texto possui ou não conteúdo tóxico relacionado à raça ou etnia.
-- `religious_intolerance`: rótulo binário que indica se o texto possui ou não intolerância religiosa.
-- `sexism`: rótulo binário que indica se o texto possui ou não conteúdo tóxico relacionado a discriminação de gênero.
-- `xenophobia`: rótulo binário que indica se o texto possui ou não conteúdo tóxico relacionado à xenofobia.
+- `id` (string): Identificador único da instância.
+- `text` (string): O texto da instância.
+- `is_offensive` (string): Se o texto é ofensivo (`OFF`) ou não (`NOT`).
+- `is_targeted` (string): Se o texto é direcionado (`TIN`) ou não direcionado (`UNT`).
+- `targeted_type` (string): Tipo de destino (individual `IND`, grupo `GRP` ou outro `OTH`). Disponível apenas se `is_targeted` for `True`.
+- `toxic_spans` (string): Lista de spans tóxicos.
+- `saúde` (booleano): Se o texto contém discurso de ódio com base em condições de saúde, como deficiência, doença, etc.
+- `ideologia` (boolean): Indica se o texto contém discurso de ódio baseado nas ideias ou crenças de uma pessoa.
+- `insult` (boolean): se o texto contém conteúdo insultuoso, inflamatório ou provocativo.
+- `lgbtqphobia` (booleano): se o texto contém conteúdo nocivo relacionado à identidade de gênero ou orientação sexual.
+- `other_lifestyle` (boolean): Se o texto contém discurso de ódio relacionado a hábitos de vida (por exemplo, veganismo, vegetarianismo, etc.).
+- `physical_aspects` (boolean): Se o texto contém discurso de ódio relacionado à aparência física.
+- `profanity_obscene` (boolean): Se o texto contém palavrões ou conteúdo obsceno.
+- `racism` (boolean): Se o texto contém pensamentos preconceituosos ou ações discriminatórias baseadas em diferenças de raça/etnia.
+- `religious_intolerance` (boolean): Se o texto contém intolerância religiosa.
+- `sexism` (booleano): se o texto contém conteúdo discriminatório com base em diferenças de sexo/gênero (por exemplo, sexismo, misoginia, etc.).
+- `xenophobia` (boolean): Se o texto contém discurso de ódio contra estrangeiros.
 
 Os arquivos CSV seguem nossa estratégia de atribuição de rótulos conforme descrito abaixo.
 
