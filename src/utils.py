@@ -3,7 +3,7 @@ import yaml
 import logging
 import datetime
 import pandas as pd
-from src.data_classes import RawText
+from .data_classes import RawText
 from typing import Dict, Any, List, Union
 
 _logger = logging.getLogger(__name__)

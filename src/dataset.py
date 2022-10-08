@@ -14,6 +14,7 @@ from src.data_classes import (
 
 _logger = logging.getLogger(__name__)
 
+
 class Dataset(object):
     def __init__(self, annotators: List[Annotator], toxicity_threshold: float = 0.5):
         """Initialize the BuildDataset class."""
@@ -123,12 +124,12 @@ class Dataset(object):
         - annotations: List of annotations.
         - annotator_id: The annotator id.
         - label: The label of the offensive type.
-        
+
         Returns:
         - True if the offensive text is related to label, False otherwise.
         """
         annotation = self._get_annotation_by_id(annotations, annotator_id)
-        if annotation:        
+        if annotation:
             for each in annotation["result"]:
                 if each["from_name"] in ["Sentiment", "toxic_labels"]:
                     if isinstance(label, str):
@@ -139,7 +140,7 @@ class Dataset(object):
                             if l in each["value"]["choices"]:
                                 return True
         return False
-        
+
     def _get_toxic_spans(self, annotations: List[Any], annotator_id: int) -> List[int]:
         """Get the toxic spans for a given annotation.
 
@@ -153,17 +154,18 @@ class Dataset(object):
         spans = []
 
         annotation = self._get_annotation_by_id(annotations, annotator_id)
-        if annotation:    
+        if annotation:
             for each in annotation["result"]:
                 if each["from_name"] in ["BadWords", "toxic_spans"]:
-                    tmp_spans = list(range(each["value"]["start"], each["value"]["end"]))
+                    tmp_spans = list(
+                        range(each["value"]["start"], each["value"]["end"]))
                     spans.extend(tmp_spans)
 
         if len(spans) > 0:
             spans = list(set(spans))
-            spans.sort()            
+            spans.sort()
         return spans
-            
+
     def _get(self, item: Dict[Any, Any]) -> RawText:
 
         text = RawText(
@@ -183,22 +185,37 @@ class Dataset(object):
                 annotation_id = item_annotation["completed_by"]
                 annotation = Annotation(
                     annotator_id=annotation_id,
-                    is_offensive=self._get_is_offensive(item["annotations"], annotation_id),
-                    is_targeted=self._get_is_targeted(item["annotations"], annotation_id),
-                    targeted_type=self._get_targeted_type(item["annotations"], annotation_id),
-                    toxic_spans=self._get_toxic_spans(item["annotations"], annotation_id),
-                    health=self._get_offensive_type(item["annotations"], annotation_id, "Health"),
-                    ideology=self._get_offensive_type(item["annotations"], annotation_id, "Ideology"),
-                    insult=self._get_offensive_type(item["annotations"], annotation_id, "Insult"),
-                    lgbtqphobia=self._get_offensive_type(item["annotations"], annotation_id, ["Identity Attack", "LGBTQphobia"]),
-                    other_lifestyle=self._get_offensive_type(item["annotations"], annotation_id, "Other-Lifestyle"),
-                    physical_aspects=self._get_offensive_type(item["annotations"], annotation_id, ["Body", "Physical Aspects"]),
-                    profanity_obscene=self._get_offensive_type(item["annotations"], annotation_id, ["Profanity", "Profanity/Obscene"]),
-                    racism=self._get_offensive_type(item["annotations"], annotation_id, "Racism"),
-                    religious_intolerance=self._get_offensive_type(item["annotations"], annotation_id, "Religious intolerance"),
-                    sexism=self._get_offensive_type(item["annotations"], annotation_id, "Sexism"),
-                    xenophobia=self._get_offensive_type(item["annotations"], annotation_id, "Xenophobia"),
-                    )
+                    is_offensive=self._get_is_offensive(
+                        item["annotations"], annotation_id),
+                    is_targeted=self._get_is_targeted(
+                        item["annotations"], annotation_id),
+                    targeted_type=self._get_targeted_type(
+                        item["annotations"], annotation_id),
+                    toxic_spans=self._get_toxic_spans(
+                        item["annotations"], annotation_id),
+                    health=self._get_offensive_type(
+                        item["annotations"], annotation_id, "Health"),
+                    ideology=self._get_offensive_type(
+                        item["annotations"], annotation_id, "Ideology"),
+                    insult=self._get_offensive_type(
+                        item["annotations"], annotation_id, "Insult"),
+                    lgbtqphobia=self._get_offensive_type(item["annotations"], annotation_id, [
+                                                         "Identity Attack", "LGBTQphobia"]),
+                    other_lifestyle=self._get_offensive_type(
+                        item["annotations"], annotation_id, "Other-Lifestyle"),
+                    physical_aspects=self._get_offensive_type(
+                        item["annotations"], annotation_id, ["Body", "Physical Aspects"]),
+                    profanity_obscene=self._get_offensive_type(item["annotations"], annotation_id, [
+                                                               "Profanity", "Profanity/Obscene"]),
+                    racism=self._get_offensive_type(
+                        item["annotations"], annotation_id, "Racism"),
+                    religious_intolerance=self._get_offensive_type(
+                        item["annotations"], annotation_id, "Religious intolerance"),
+                    sexism=self._get_offensive_type(
+                        item["annotations"], annotation_id, "Sexism"),
+                    xenophobia=self._get_offensive_type(
+                        item["annotations"], annotation_id, "Xenophobia"),
+                )
 
                 text.annotations.append(annotation)
 
@@ -209,7 +226,7 @@ class Dataset(object):
 
         Args:
         - raw: The raw data from the label studio.
-        
+
         Returns:
         - A list of RawText and Metadata objects.
         """
@@ -244,25 +261,40 @@ class Dataset(object):
             processed_text = ProcessedText(
                 id=text.id,
                 text=text.text,
-                is_offensive=label_strategy.is_offensive([i.is_offensive for i in text.annotations]),
-                is_targeted=label_strategy.is_targeted([i.is_targeted for i in text.annotations]),
-                targeted_type=label_strategy.targeted_type([i.targeted_type for i in text.annotations]),
-                toxic_spans=label_strategy.toxic_spans([i.toxic_spans for i in text.annotations]),
-                health=label_strategy.health([i.health for i in text.annotations]),
-                ideology=label_strategy.ideology([i.ideology for i in text.annotations]),
-                insult=label_strategy.insult([i.insult for i in text.annotations]),
-                lgbtqphobia=label_strategy.lgbtqphobia([i.lgbtqphobia for i in text.annotations]),
-                other_lifestyle=label_strategy.other_lifestyle([i.other_lifestyle for i in text.annotations]),
-                physical_aspects=label_strategy.physical_aspects([i.physical_aspects for i in text.annotations]),
-                profanity_obscene=label_strategy.profanity_obscene([i.profanity_obscene for i in text.annotations]),
-                racism=label_strategy.racism([i.racism for i in text.annotations]),
-                religious_intolerance=label_strategy.religious_intolerance([i.religious_intolerance for i in text.annotations]),
-                sexism=label_strategy.sexism([i.sexism for i in text.annotations]),
-                xenophobia=label_strategy.xenophobia([i.xenophobia for i in text.annotations]),
+                is_offensive=label_strategy.is_offensive(
+                    [i.is_offensive for i in text.annotations]),
+                is_targeted=label_strategy.is_targeted(
+                    [i.is_targeted for i in text.annotations]),
+                targeted_type=label_strategy.targeted_type(
+                    [i.targeted_type for i in text.annotations]),
+                toxic_spans=label_strategy.toxic_spans(
+                    [i.toxic_spans for i in text.annotations]),
+                health=label_strategy.health(
+                    [i.health for i in text.annotations]),
+                ideology=label_strategy.ideology(
+                    [i.ideology for i in text.annotations]),
+                insult=label_strategy.insult(
+                    [i.insult for i in text.annotations]),
+                lgbtqphobia=label_strategy.lgbtqphobia(
+                    [i.lgbtqphobia for i in text.annotations]),
+                other_lifestyle=label_strategy.other_lifestyle(
+                    [i.other_lifestyle for i in text.annotations]),
+                physical_aspects=label_strategy.physical_aspects(
+                    [i.physical_aspects for i in text.annotations]),
+                profanity_obscene=label_strategy.profanity_obscene(
+                    [i.profanity_obscene for i in text.annotations]),
+                racism=label_strategy.racism(
+                    [i.racism for i in text.annotations]),
+                religious_intolerance=label_strategy.religious_intolerance(
+                    [i.religious_intolerance for i in text.annotations]),
+                sexism=label_strategy.sexism(
+                    [i.sexism for i in text.annotations]),
+                xenophobia=label_strategy.xenophobia(
+                    [i.xenophobia for i in text.annotations]),
             )
 
             processed_text = self._force_schema(processed_text)
-            
+
             # Origin metadata
             meta_info = Metadata(
                 id=text.id,
@@ -278,7 +310,9 @@ class Dataset(object):
 
             # Annotators
             for annotation in text.annotations:
-                annotator = [i for i in self.annotators if i.annotator_id == annotation.annotator_id][0].copy()
+                annotator = [
+                    i for i in self.annotators if i.annotator_id ==
+                    annotation.annotator_id][0].copy()
                 annotator.id = text.id
                 metadata.append(annotator)
 
@@ -290,7 +324,7 @@ class Dataset(object):
 
         Args:
         - raw: The RawText objects.
-        
+
         Returns:
         - A list of Text objects.
         """
@@ -302,12 +336,12 @@ class Dataset(object):
                 id=item.id,
                 text=item.text,
                 metadata=Metadata(
-                id=item.id,
-                source=item.source,
-                created_at=item.created_at,
-                collected_at=item.collected_at,
-                toxicity_score=item.toxicity_score,
-                category=item.publisher_category
+                    id=item.id,
+                    source=item.source,
+                    created_at=item.created_at,
+                    collected_at=item.collected_at,
+                    toxicity_score=item.toxicity_score,
+                    category=item.publisher_category
                 ),
                 annotations=item.annotations
             )
@@ -340,9 +374,10 @@ class Dataset(object):
 
     def build(self,
               raw: List[Dict[Any, Any]],
-              label_strategy: LabelStrategy = LabelStrategy()) -> Dict[str, List[ProcessedText | Metadata | Text]]:
+              label_strategy: LabelStrategy = LabelStrategy()
+              ) -> Dict[str, List[ProcessedText | Metadata | Text]]:
         """Process a list of label studio raw data and build the dataset.
-        
+
         Args:
         - raw: The raw data from the label studio.
         - label_strategy: The label strategy.
@@ -353,11 +388,12 @@ class Dataset(object):
         _logger.debug(f"Building the dataset for {len(raw)} items.")
 
         raw_texts = self.get_raw_texts(raw)
-        processed_texts, metadata = self.get_processed_texts(raw_texts, label_strategy)
+        processed_texts, metadata = self.get_processed_texts(
+            raw_texts, label_strategy)
         full_texts = self.get_full_texts(raw_texts)
-                
+
         _logger.debug(f"Built the dataset for {len(processed_texts)} items.")
-        
+
         return {
             "processed_texts": processed_texts,
             "metadata": metadata,
@@ -366,7 +402,7 @@ class Dataset(object):
 
     def _force_schema(self, processed_text: ProcessedText):
         """Force the OLID-BR schema for the processed text.
-        
+
         Args:
         - processed_text: The processed text to force the schema for.
 
@@ -374,7 +410,8 @@ class Dataset(object):
         - The processed text with the forced schema.
         """
         if processed_text.is_offensive == "NOT":
-            _logger.debug(f"Removing offensive annotations for {processed_text.id}.")
+            _logger.debug(
+                f"Removing offensive annotations for {processed_text.id}.")
             processed_text.is_targeted = "UNT"
             processed_text.targeted_type = None
             processed_text.toxic_spans = None
@@ -394,7 +431,8 @@ class Dataset(object):
             processed_text.is_targeted == "UNT"
             and processed_text.targeted_type is not None
         ):
-            _logger.debug(f"Changing targeted type to None for {processed_text.id}.")
+            _logger.debug(
+                f"Changing targeted type to None for {processed_text.id}.")
             processed_text.targeted_type = None
-        
+
         return processed_text
