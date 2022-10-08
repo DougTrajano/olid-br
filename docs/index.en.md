@@ -7,7 +7,7 @@ summary: Offensive Language Identification Dataset for Brazilian Portuguese.
 
 Offensive Language Identification Dataset for Brazilian Portuguese (OLID-BR) is a dataset with multi-task annotations for the detection of offensive language.
 
-The current version (v1.0) contains **7,943** comments from different sources, including social media (YouTube and Twitter) and related datasets.
+The current version (v1.0) contains **7,943** (extendable to 13,538) comments from different sources, including social media (YouTube and Twitter) and related datasets.
 
 OLID-BR contains a collection of annotated sentences in Brazilian Portuguese using an annotation model that encompasses the following levels:
 
