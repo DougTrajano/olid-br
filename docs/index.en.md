@@ -80,23 +80,23 @@ Each instance is a social media comment with a corresponding ID and annotations 
 
 The simplified configuration includes:
 
-- `id`: ID of the comment.
-- `text`: Text of the comment.
-- `is_offensive`: Whether the comment is offensive or not.
-- `is_targeted`: Whether the comment is targeted or not.
-- `targeted_type`: Type of the target (individual, group, or other). Only available if `is_targeted` is `True`.
-- `toxic_spans`: List of toxic spans.
-- `health`: Whether the comment contains health-related toxicity.
-- `ideology`: Whether the comment contains ideology-related toxicity.
-- `insult`: Whether the comment contains insult-related toxicity.
-- `lgbtqphobia`: Whether the comment contains lgbtqphobia-related toxicity.
-- `other_lifestyle`: Whether the comment contains other_lifestyle-related toxicity.
-- `physical_aspects`: Whether the comment contains physical_aspects-related toxicity.
-- `profanity_obscene`: Whether the comment contains profanity-related toxicity.
-- `racism`: Whether the comment contains racism-related toxicity.
-- `religious_intolerance`: Whether the comment contains religious_intolerance-related toxicity.
-- `sexism`: Whether the comment contains sexism-related toxicity.
-- `xenophobia`: Whether the comment contains xenophobia-related toxicity.
+- `id` (string): Unique identifier of the instance.
+- `text` (string): The text of the instance.
+- `is_offensive` (string): Whether the text is offensive (`OFF`) or not (`NOT`).
+- `is_targeted` (string): Whether the text is targeted (`TIN`) or untargeted (`UNT`).
+- `targeted_type` (string): Type of the target (individual `IND`, group `GRP`, or other `OTH`). Only available if `is_targeted` is `True`.
+- `toxic_spans` (string): List of toxic spans.
+- `health` (boolean): Whether the text contains hate speech based on health conditions such as disability, disease, etc.
+- `ideology` (boolean): Indicates if the text contains hate speech based on a person's ideas or beliefs.
+- `insult` (boolean): Whether the text contains insult, inflammatory, or provocative content.
+- `lgbtqphobia` (boolean): Whether the text contains harmful content related to gender identity or sexual orientation.
+- `other_lifestyle` (boolean): Whether the text contains hate speech related to life habits (e.g. veganism, vegetarianism, etc.).
+- `physical_aspects` (boolean): Whether the text contains hate speech related to physical appearance.
+- `profanity_obscene` (boolean): Whether the text contains profanity or obscene content.
+- `racism` (boolean): Whether the text contains prejudiced thoughts or discriminatory actions based on differences in race/ethnicity.
+- `religious_intolerance` (boolean): Whether the text contains religious intolerance.
+- `sexism` (boolean): Whether the text contains discriminatory content based on differences in sex/gender (e.g. sexism, misogyny, etc.).
+- `xenophobia` (boolean): Whether the text contains hate speech against foreigners.
 
 See the [**Get Started**](get-started.en.md) page for more information.
 

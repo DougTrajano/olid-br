@@ -80,23 +80,23 @@ Cada instância é um comentário de mídia social com um ID e anotações corre
 
 A configuração simplificada inclui:
 
-- `id`: ID do comentário.
-- `texto`: Texto do comentário.
-- `is_offensive`: Se o comentário é ofensivo ou não.
-- `is_targeted`: Se o comentário é direcionado ou não.
-- `targeted_type`: Tipo do alvo (individual, grupo ou outro). Disponível apenas se `is_targeted` for `True`.
-- `toxic_spans`: Lista de spans tóxicos.
-- `saúde`: se o comentário contém toxicidade relacionada à saúde.
-- `ideologia`: se o comentário contém toxicidade relacionada à ideologia.
-- `insult`: se o comentário contém toxicidade relacionada ao insulto.
-- `lgbtqphobia`: Se o comentário contém toxicidade relacionada à lgbtqphobia.
-- `other_lifestyle`: se o comentário contém toxicidade relacionada a other_lifestyle.
-- `physical_aspects`: se o comentário contém toxicidade relacionada a physical_aspects.
-- `profanity_obscene`: se o comentário contém toxicidade relacionada a palavrões.
-- `racism`: se o comentário contém toxicidade relacionada ao racismo.
-- `religious_intolerance`: se o comentário contém toxicidade relacionada à religião.
-- `sexism`: se o comentário contém toxicidade relacionada ao sexismo.
-- `xenofobia`: se o comentário contém toxicidade relacionada à xenofobia.
+- `id` (string): Identificador único da instância.
+- `text` (string): O texto da instância.
+- `is_offensive` (string): Se o texto é ofensivo (`OFF`) ou não (`NOT`).
+- `is_targeted` (string): Se o texto é direcionado (`TIN`) ou não direcionado (`UNT`).
+- `targeted_type` (string): Tipo de destino (individual `IND`, grupo `GRP` ou outro `OTH`). Disponível apenas se `is_targeted` for `True`.
+- `toxic_spans` (string): Lista de spans tóxicos.
+- `saúde` (booleano): Se o texto contém discurso de ódio com base em condições de saúde, como deficiência, doença, etc.
+- `ideologia` (boolean): Indica se o texto contém discurso de ódio baseado nas ideias ou crenças de uma pessoa.
+- `insult` (boolean): se o texto contém conteúdo insultuoso, inflamatório ou provocativo.
+- `lgbtqphobia` (booleano): se o texto contém conteúdo nocivo relacionado à identidade de gênero ou orientação sexual.
+- `other_lifestyle` (boolean): Se o texto contém discurso de ódio relacionado a hábitos de vida (por exemplo, veganismo, vegetarianismo, etc.).
+- `physical_aspects` (boolean): Se o texto contém discurso de ódio relacionado à aparência física.
+- `profanity_obscene` (boolean): Se o texto contém palavrões ou conteúdo obsceno.
+- `racism` (boolean): Se o texto contém pensamentos preconceituosos ou ações discriminatórias baseadas em diferenças de raça/etnia.
+- `religious_intolerance` (boolean): Se o texto contém intolerância religiosa.
+- `sexism` (booleano): se o texto contém conteúdo discriminatório com base em diferenças de sexo/gênero (por exemplo, sexismo, misoginia, etc.).
+- `xenophobia` (boolean): Se o texto contém discurso de ódio contra estrangeiros.
 
 Consulte a página [**Get Started**](get-started.en.md) para obter mais informações.
 
