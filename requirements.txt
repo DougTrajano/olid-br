@@ -25,6 +25,6 @@ scikit_learn~=1.1.2
 simpletransformers~=0.63.9
 spacymoji~=3.0.1
 spacy~=3.4.1
-transformers==4.22.2
+transformers==4.23.1
 tweepy~=4.10.1
 wordcloud==1.8.2.2
