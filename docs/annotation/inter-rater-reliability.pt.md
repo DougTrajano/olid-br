@@ -15,17 +15,17 @@ No Handbook of Inter-Rater Reliability[^1], Gwet, K.L. propôs um diagrama que a
 
 ```mermaid
 graph TD
-    A[Qual coeficiente de concordância você deve usar?] --> B{Classificações Nominais?}
-    B -->|Não| D{Classificações de proporção?}
-    B -->|Sim| C[Usar coeficientes não ponderados]
-    D -->|Sim| E{Valores de classificação predeterminados?}
-    D -->|Não| F{Classificações de intervalo?}
-    F -->|"Não (estas são classificações ordinais)"| H[Use coeficientes ponderados.<br>Somente pesos ordinais.]
-    F -->|Sim| G{Valores de classificação predeterminados?}
-    E -->|Sim| I[Use coeficientes ponderados.<br>Todos os pesos podem ser usados.]
-    E -->|Não| J[Use Coeficientes de Correlação Intraclasse]
-    G -->|Sim| K[Use coeficientes ponderados.<br>Pesos quadráticos, lineares e radicais podem ser usados]
-    G -->|Não| J[Use Coeficientes de Correlação Intraclasse]
+    A[Which Agreement Coefficient Should you use?] --> B{Nominal Ratings?}
+    B -->|No| D{Ratio Ratings?}
+    B -->|Yes| C[Use Unweighted Coefficients]
+    D -->|Yes| E{Predetermined<br>Rating Values?}
+    D -->|No| F{Interval Ratings?}
+    F -->|"No (these are ordinal ratings)"| H[Use Weighted Coefficients.<br>Ordinal Weights Only.]
+    F -->|Yes| G{Predetermined<br>Rating Values?}
+    E -->|Yes| I[Use Weighted Coefficients.<br>All Weights Can be Used.]
+    E -->|No| J[Use Intraclass Correlation Coefficients]
+    G -->|Yes| K[Use Weighted Coefficients.<br>Quadratic, Linear, and Radical Weights can be used]
+    G -->|No| J[Use Intraclass Correlation Coefficients]
 ```
 
 Todas as nossas classificações são do tipo [***nominal***]{Um tipo de dado usado para rotular variáveis ​​sem fornecer nenhum valor quantitativo.|top-right}, então veremos **Coeficientes não ponderados** propostos por Gwet, K.L. no livro.
