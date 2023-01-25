@@ -6,7 +6,6 @@ google-cloud-translate==2.0.1
 google-cloud==0.34.0
 google_api_python_client~=2.64.0
 https://github.com/explosion/spacy-models/releases/download/pt_core_news_lg-3.4.0/pt_core_news_lg-3.4.0.tar.gz
-instagram_scraper~=1.11.0
 irrcac==0.4.0
 iterative_stratification~=0.1.7
 kaggle~=1.5.12
