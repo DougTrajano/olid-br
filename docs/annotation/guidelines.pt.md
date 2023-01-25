@@ -7,6 +7,13 @@ summary: As diretrizes de anotação são um conjunto de regras e convenções q
 
 Nessa página detalhamos as diretrizes seguidas pelos anotadores durante o processo de anotação dos textos presentes no OLID-BR.
 
+Na figura abaixo, você pode ver o esquema de anotação para o conjunto de dados OLID-BR.
+
+<figure>
+  <img src="../images/olid-br-taxonomy.png"/>
+  <figcaption>Taxonomia hierárquica para categorizar linguagem ofensiva, proposta pelo autor.</figcaption>
+</figure>
+
 ## Qual a tarefa que você está fazendo?
 
 Você visualizará comentários com conteúdo ofensivo/tóxico e precisará responder algumas perguntas sobre isso, essas perguntas ajudarão a identificar comentários ofensivos e/ou entender melhor o comportamento dos *haters*.

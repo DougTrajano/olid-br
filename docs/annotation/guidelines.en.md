@@ -7,6 +7,13 @@ summary: The guidelines followed by our annotators in the OLID-BR dataset.
 
 On this page, we will detail the guidelines followed by our annotators in the data labeling process in the OLID-BR.
 
+In the figure below, you can see the annotation schema for the OLID-BR dataset.
+
+<figure>
+  <img src="../images/olid-br-taxonomy.png"/>
+  <figcaption>Hierarchical taxonomy for categorizing offensive language, proposed by author.</figcaption>
+</figure>
+
 ## What task are you doing?
 
 You will see comments with offensive/toxic content and you will need to answer some questions about that, these questions will help us identify offensive comments and/or better understand the behavior of *haters*.
