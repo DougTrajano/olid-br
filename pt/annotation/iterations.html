@@ -1,0 +1,1308 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Offensive Language Identification Dataset for Brazilian Portuguese">
+      
+      
+        <meta name="author" content="Douglas Trajano">
+      
+      
+        <link rel="canonical" href="https://github.com/DougTrajano/olid-br/pt/annotation/iterations.html">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
+    
+    
+      
+        <title>Iterações de Anotação - OLID-BR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/tooltip.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#iterações" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../index.html" title="OLID-BR" class="md-header__button md-logo" aria-label="OLID-BR" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OLID-BR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Iterações de Anotação
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../en/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../" hreflang="pt" class="md-select__link">
+                    Português
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/DougTrajano/olid-br" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    olid-br
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../index.html" class="md-tabs__link">
+      Overview
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../get-started.html" class="md-tabs__link">
+      Get Started
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link md-tabs__link--active">
+        Annotation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../data-pipeline.html" class="md-tabs__link">
+      Data Pipeline
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../glossary.html" class="md-tabs__link">
+      Glossary
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="OLID-BR" class="md-nav__button md-logo" aria-label="OLID-BR" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    OLID-BR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/DougTrajano/olid-br" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    olid-br
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-started.html" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Annotation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Annotation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Annotation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guidelines.html" class="md-nav__link">
+        Guidelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="inter-rater-reliability.html" class="md-nav__link">
+        Inter-Rater Reliability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Iterations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="iterations.html" class="md-nav__link md-nav__link--active">
+        Iterations
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iteração-1" class="md-nav__link">
+    Iteração 1
+  </a>
+  
+    <nav class="md-nav" aria-label="Iteração 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confiabilidade-entre-avaliadores" class="md-nav__link">
+    Confiabilidade entre avaliadores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iteração-2" class="md-nav__link">
+    Iteração 2
+  </a>
+  
+    <nav class="md-nav" aria-label="Iteração 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confiabilidade-entre-avaliadores_1" class="md-nav__link">
+    Confiabilidade entre avaliadores
+  </a>
+  
+    <nav class="md-nav" aria-label="Confiabilidade entre avaliadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comentários" class="md-nav__link">
+    Comentários
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusões" class="md-nav__link">
+    Conclusões
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iteração-3" class="md-nav__link">
+    Iteração 3
+  </a>
+  
+    <nav class="md-nav" aria-label="Iteração 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inter-rater-reliability" class="md-nav__link">
+    Inter-Rater Reliability
+  </a>
+  
+    <nav class="md-nav" aria-label="Inter-Rater Reliability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comentários_1" class="md-nav__link">
+    Comentários
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusões_1" class="md-nav__link">
+    Conclusões
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iteração-4" class="md-nav__link">
+    Iteração 4
+  </a>
+  
+    <nav class="md-nav" aria-label="Iteração 4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inter-rater-reliability_1" class="md-nav__link">
+    Inter-Rater Reliability
+  </a>
+  
+    <nav class="md-nav" aria-label="Inter-Rater Reliability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comentários_2" class="md-nav__link">
+    Comentários
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusões_2" class="md-nav__link">
+    Conclusões
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="qualified-annotators.html" class="md-nav__link">
+        Qualified Annotators
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="schema.html" class="md-nav__link">
+        Schema
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-pipeline.html" class="md-nav__link">
+        Data Pipeline
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary.html" class="md-nav__link">
+        Glossary
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="iterações">Iterações<a class="headerlink" href="#iterações" title="Permanent link">#</a></h1>
+<p>Decidimos trabalhar em iterações porque nos permite validar e melhorar o processo de anotação e as diretrizes. Cada iteração tem suas próprias metas e objetivos.</p>
+<h2 id="iteração-1">Iteração 1<a class="headerlink" href="#iteração-1" title="Permanent link">#</a></h2>
+<p><a href="https://shields.io/"><img alt="Status badge" src="https://img.shields.io/badge/Status-Finished-blue.svg" /></a></p>
+<p>Nesta iteração, nosso objetivo foi validar e refinar nosso processo de anotação. Foi a primeira vez que aplicamos o processo de anotação. Dois anotadores rotularam os dados. O primeiro anotador era um voluntário, o segundo era o autor do conjunto de dados. O voluntário forneceu feedbacks construtivos para ajustar o processo de anotação. Os dados rotulados pelo pesquisador predominaram sob os rótulos do voluntário, pois o pesquisador corrigiu alguns erros no processo de anotação.</p>
+<h3 id="confiabilidade-entre-avaliadores">Confiabilidade entre avaliadores<a class="headerlink" href="#confiabilidade-entre-avaliadores" title="Permanent link">#</a></h3>
+<p>Nesta iteração, não geramos a análise de confiabilidade entre avaliadores porque fizemos algumas alterações e alinhamentos durante a iteração.</p>
+<details><summary>Profiling Report</summary>
+
+<iframe width=100% height=500 frameBorder=0 src="../reports/olidbr_pilot.html"></iframe>
+
+</details>
+
+<h2 id="iteração-2">Iteração 2<a class="headerlink" href="#iteração-2" title="Permanent link">#</a></h2>
+<p><a href="https://shields.io/"><img alt="Status badge" src="https://img.shields.io/badge/Status-Finished-blue.svg" /></a></p>
+<p>Na segunda iteração, introduzimos trabalhadores contratados para fazer as anotações. Os anotadores foram treinados pelo autor do conjunto de dados conforme descrito em <a href="qualified-annotators.en.md"><strong>Anotadores qualificados</strong></a>.</p>
+<h3 id="confiabilidade-entre-avaliadores_1">Confiabilidade entre avaliadores<a class="headerlink" href="#confiabilidade-entre-avaliadores_1" title="Permanent link">#</a></h3>
+<p>Conforme descrito na seção <a href="inter-rater-reliability.en.md"><strong>Inter-Rater Reliability</strong></a>, avaliamos a confiabilidade dos anotadores usando diferentes coeficientes.</p>
+<p>Também abordamos a análise considerando como um problema <em>multi-label</em> ou vários problemas binários.</p>
+<p><strong>Problem <em>Multi-Label</em></strong></p>
+<p>Para todos os nossos <span class="tooltip hint--top" aria-label="health, ideology, insult, lgbtqphobia, other_lifestyle, physical_aspects, profanity_obscene, racism, religious_intolerance, sexism, xenophobia"><strong>rótulos de toxicidade</strong></span> calculamos o Krippendorff's alpha (usando MASI distance) e o <em>Percent Agreement</em>.</p>
+<ul>
+<li><strong>Krippendorff's alpha</strong>: 0,1962 (pequena concordância)</li>
+<li><strong>Percent Agreement</strong>: 0,1877</li>
+</ul>
+<p><strong>Problema binário</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature / metrics</th>
+<th align="center">Percent Agreement</th>
+<th align="center">Krippendorff's alpha</th>
+<th align="center">Gwet's AC<sub>1</sub></th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>is_offensive</strong></td>
+<td align="center">0,7277</td>
+<td align="center">0,0595</td>
+<td align="center">0,7750</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>is_targeted</strong></td>
+<td align="center">0,1610</td>
+<td align="center">-0,1348</td>
+<td align="center">-0,1029</td>
+<td>[1]</td>
+</tr>
+<tr>
+<td><strong>targeted_type</strong></td>
+<td align="center">0,0641</td>
+<td align="center">0,2461</td>
+<td align="center">0,4978</td>
+<td>[1]</td>
+</tr>
+<tr>
+<td><strong>toxic_spans</strong></td>
+<td align="center">0,1220</td>
+<td align="center">0,2709</td>
+<td align="center">N/A</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>health</strong></td>
+<td align="center">0,9760</td>
+<td align="center">0,0447</td>
+<td align="center">0,9837</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ideology</strong></td>
+<td align="center">0,7647</td>
+<td align="center">0,3019</td>
+<td align="center">0,7976</td>
+<td>[3]</td>
+</tr>
+<tr>
+<td><strong>insult</strong></td>
+<td align="center">0,4713</td>
+<td align="center">0,0895</td>
+<td align="center">0,425</td>
+<td>[3]</td>
+</tr>
+<tr>
+<td><strong>lgbtqphobia</strong></td>
+<td align="center">0,9453</td>
+<td align="center">0,5583</td>
+<td align="center">0,9603</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>other_lifestyle</strong></td>
+<td align="center">0,9860</td>
+<td align="center">0,0824</td>
+<td align="center">0,9906</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>physical_aspects</strong></td>
+<td align="center">0,9463</td>
+<td align="center">0,3272</td>
+<td align="center">0,9622</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>profanity_obscene</strong></td>
+<td align="center">0,6837</td>
+<td align="center">0,0850</td>
+<td align="center">0,726</td>
+<td>[3]</td>
+</tr>
+<tr>
+<td><strong>racism</strong></td>
+<td align="center">0,9750</td>
+<td align="center">0,2564</td>
+<td align="center">0,9829</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>religious_intolerance</strong></td>
+<td align="center">1,0</td>
+<td align="center">1,0</td>
+<td align="center">1,0</td>
+<td>[2]</td>
+</tr>
+<tr>
+<td><strong>sexism</strong></td>
+<td align="center">0,8753</td>
+<td align="center">0,1721</td>
+<td align="center">0,9076</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>xenophobia</strong></td>
+<td align="center">0,9673</td>
+<td align="center">0,0732</td>
+<td align="center">0,9777</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="comentários">Comentários<a class="headerlink" href="#comentários" title="Permanent link">#</a></h4>
+<ul>
+<li>[1] A pergunta que originou os recursos <code>is_targeted</code> e <code>targeted_type</code> são opcionais, devem ser marcadas somente se o texto for direcionado. Parece que o anotador 126 não entendeu e marcou tudo como direcionado.</li>
+<li>[2] Não temos nenhum texto marcado com <code>religious_intolerance</code> por nossos anotadores.</li>
+<li>[3] Temos anotações mais inconsistentes nos rótulos <code>idelogy</code>, <code>insult</code> e <code>profanity_obscene</code> (desconsiderando [1] [2])</li>
+</ul>
+<h4 id="conclusões">Conclusões<a class="headerlink" href="#conclusões" title="Permanent link">#</a></h4>
+<p>Tivemos um mal entendimento das diretrizes de anotação por um dos anotadores, o que acabou gerando inconsistência nos rótulos <code>is_targeted</code> e <code>targeted_type</code>.</p>
+<p>Sobre os rótulos de toxicidade (<em>toxicity labels</em>), percebemos que são raros os casos em que todos os anotadores concordam com a anotação, levando a um alto índice de discordância e consequentemente a um baixo valor de Krippendorff's alpha. Os rótulos que apresentaram maior discordância são <code>insult</code>, <code>ideology</code> e <code>profanity_obscene</code>.</p>
+<p>Iremos repassar as diretrizes de anotação com os anotadores para a próxima iteração.</p>
+<details><summary>Profiling Report</summary>
+
+<iframe width=100% height=500 frameBorder=0 src="../reports/olidbr_pilot_2.html"></iframe>
+
+</details>
+
+<h2 id="iteração-3">Iteração 3<a class="headerlink" href="#iteração-3" title="Permanent link">#</a></h2>
+<p><a href="https://shields.io/"><img alt="Status badge" src="https://img.shields.io/badge/Status-Finished-blue.svg" /></a></p>
+<p>Na terceira iteração, nós retreinamos os anotadores com base nas lições aprendidas na iteração anterior. Também substituímos um dos anotadores contratados. Os anotadores foram solicitados a rotular mais 3.000 comentários.</p>
+<h3 id="inter-rater-reliability">Inter-Rater Reliability<a class="headerlink" href="#inter-rater-reliability" title="Permanent link">#</a></h3>
+<p>Como descrito na seção <a href="inter-rater-reliability.html"><strong>Inter-Rater Reliability</strong></a>, avaliamos a confiabilidade dos anotadores usando diferentes coeficientes.</p>
+<p>Para avaliar os rótulos de toxicidade, temos duas possíveis abordagens: Multi-Label ou Binary.</p>
+<p><strong>Multi-Label Problem</strong></p>
+<p>Para todos os nossos <span class="tooltip hint--top" aria-label="health, ideology, insult, lgbtqphobia, other_lifestyle, physical_aspects, profanity_obscene, racism, religious_intolerance, sexism, xenophobia"><strong>rótulos de toxicidade</strong></span> calculamos o Krippendorff's alpha (usando MASI distance) e o <em>Percent Agreement</em>.</p>
+<ul>
+<li><strong>Krippendorff's alpha</strong>: 0,4653 (concordância moderada)</li>
+<li><strong>Percent Agreement</strong>: 0,2758</li>
+</ul>
+<p><strong>Binary Problem</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature / metrics</th>
+<th align="center">Percent Agreement</th>
+<th align="center">Krippendorff's alpha</th>
+<th align="center">Gwet's AC<sub>1</sub></th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>is_offensive</strong></td>
+<td align="center">0.6509</td>
+<td align="center">0.1777</td>
+<td align="center">0.6754</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>is_targeted</strong></td>
+<td align="center">0.3551</td>
+<td align="center">0.1072</td>
+<td align="center">0.1709</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>targeted_type</strong></td>
+<td align="center">0.1975</td>
+<td align="center">0.4887</td>
+<td align="center">0.6300</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>toxic_spans</strong></td>
+<td align="center">0.1757</td>
+<td align="center">0.4427</td>
+<td align="center">N/A</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>health</strong></td>
+<td align="center">0.9700</td>
+<td align="center">0.2641</td>
+<td align="center">0.9794</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ideology</strong></td>
+<td align="center">0.8670</td>
+<td align="center">0.4728</td>
+<td align="center">0.8934</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>insult</strong></td>
+<td align="center">0.5488</td>
+<td align="center">0.3317</td>
+<td align="center">0.4531</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>lgbtqphobia</strong></td>
+<td align="center">0.9613</td>
+<td align="center">0.6393</td>
+<td align="center">0.9722</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>other_lifestyle</strong></td>
+<td align="center">0.9787</td>
+<td align="center">0.4683</td>
+<td align="center">0.9854</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>physical_aspects</strong></td>
+<td align="center">0.9560</td>
+<td align="center">0.4160</td>
+<td align="center">0.9691</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>profanity_obscene</strong></td>
+<td align="center">0.7089</td>
+<td align="center">0.4894</td>
+<td align="center">0.6870</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>racism</strong></td>
+<td align="center">0.9913</td>
+<td align="center">0.3781</td>
+<td align="center">0.9942</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>religious_intolerance</strong></td>
+<td align="center">1.0</td>
+<td align="center">1.0</td>
+<td align="center">1.0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>sexism</strong></td>
+<td align="center">0.9550</td>
+<td align="center">0.1566</td>
+<td align="center">0.9689</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>xenophobia</strong></td>
+<td align="center">0.9847</td>
+<td align="center">0.2980</td>
+<td align="center">0.9896</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="comentários_1">Comentários<a class="headerlink" href="#comentários_1" title="Permanent link">#</a></h4>
+<ul>
+<li>[1] Não temos nenhum texto marcado com <code>religious_intolerance</code> por nossos anotadores.</li>
+</ul>
+<h4 id="conclusões_1">Conclusões<a class="headerlink" href="#conclusões_1" title="Permanent link">#</a></h4>
+<p>In this iteration, we had more consistent annotations which led to a better agreement between the annotators. Krippendorff's alpha for toxicity labels increased from <strong>0.1962</strong> to <strong>0.4653</strong>.</p>
+<p>Nesta iteração, tivemos anotações mais consistentes que levaram a uma melhor concordância entre os anotadores. O Krippendorff's alpha para rótulos de toxicidade aumentou de <strong>0,1962</strong> para <strong>0,4653</strong>.</p>
+<details><summary>Profiling Report</summary>
+
+<iframe width=100% height=500 frameBorder=0 src="../reports/olidbr_pilot_3.html"></iframe>
+
+</details>
+
+<h2 id="iteração-4">Iteração 4<a class="headerlink" href="#iteração-4" title="Permanent link">#</a></h2>
+<p><a href="https://shields.io/"><img alt="Status badge" src="https://img.shields.io/badge/Status-Finished-blue.svg" /></a></p>
+<p>Na quarta iteração, solicitamos aos anotadores que rotulassem um número maior de textos seguindo as mesmas diretrizes das iterações anteriores. Fixamos o prazo para 4 de outubro de 2022 (+- um mês).</p>
+<h3 id="inter-rater-reliability_1">Inter-Rater Reliability<a class="headerlink" href="#inter-rater-reliability_1" title="Permanent link">#</a></h3>
+<p>Como descrito na seção <a href="inter-rater-reliability.html"><strong>Inter-Rater Reliability</strong></a>, avaliamos a confiabilidade dos anotadores usando diferentes coeficientes.</p>
+<p>Para avaliar os rótulos de toxicidade, temos duas possíveis abordagens: Multi-Label ou Binary.</p>
+<p><strong>Multi-Label Problem</strong></p>
+<p>Para todos os nossos <span class="tooltip hint--top" aria-label="health, ideology, insult, lgbtqphobia, other_lifestyle, physical_aspects, profanity_obscene, racism, religious_intolerance, sexism, xenophobia"><strong>rótulos de toxicidade</strong></span> calculamos o Krippendorff's alpha (usando MASI distance) e o <em>Percent Agreement</em>.</p>
+<ul>
+<li><strong>Krippendorff's alpha</strong>: 0,4424 (concordância moderada)</li>
+<li><strong>Percent Agreement</strong>: 0,2769</li>
+</ul>
+<p><strong>Binary Problem</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature / metrics</th>
+<th align="center">Percent Agreement</th>
+<th align="center">Krippendorff's alpha</th>
+<th align="center">Gwet's AC<sub>1</sub></th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>is_offensive</strong></td>
+<td align="center">0.5847</td>
+<td align="center">0.2174</td>
+<td align="center">0.5716</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>is_targeted</strong></td>
+<td align="center">0.4253</td>
+<td align="center">0.1825</td>
+<td align="center">0.2790</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>targeted_type</strong></td>
+<td align="center">0.2223</td>
+<td align="center">0.4840</td>
+<td align="center">0.5756</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>toxic_spans</strong></td>
+<td align="center">0.2249</td>
+<td align="center">0.4760 (MASI distance)</td>
+<td align="center">N/A</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>health</strong></td>
+<td align="center">0.9800</td>
+<td align="center">0.1424</td>
+<td align="center">0.9865</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ideology</strong></td>
+<td align="center">0.8531</td>
+<td align="center">0.2909</td>
+<td align="center">0.8863</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>insult</strong></td>
+<td align="center">0.4938</td>
+<td align="center">0.2923</td>
+<td align="center">0.3549</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>lgbtqphobia</strong></td>
+<td align="center">0.9550</td>
+<td align="center">0.4901</td>
+<td align="center">0.9681</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>other_lifestyle</strong></td>
+<td align="center">0.9705</td>
+<td align="center">0.2239</td>
+<td align="center">0.9798</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>physical_aspects</strong></td>
+<td align="center">0.9570</td>
+<td align="center">0.3623</td>
+<td align="center">0.9700</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>profanity_obscene</strong></td>
+<td align="center">0.7436</td>
+<td align="center">0.5530</td>
+<td align="center">0.7233</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>racism</strong></td>
+<td align="center">0.9940</td>
+<td align="center">0.2481</td>
+<td align="center">0.9960</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>religious_intolerance</strong></td>
+<td align="center">1.0</td>
+<td align="center">1.0</td>
+<td align="center">1.0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>sexism</strong></td>
+<td align="center">0.9640</td>
+<td align="center">0.1880</td>
+<td align="center">0.9753</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>xenophobia</strong></td>
+<td align="center">0.9905</td>
+<td align="center">0.3840</td>
+<td align="center">0.9936</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="comentários_2">Comentários<a class="headerlink" href="#comentários_2" title="Permanent link">#</a></h4>
+<ul>
+<li>[1] Não temos nenhum texto marcado com <code>religious_intolerance</code> por nossos anotadores.</li>
+</ul>
+<h4 id="conclusões_2">Conclusões<a class="headerlink" href="#conclusões_2" title="Permanent link">#</a></h4>
+<p>Assim como na iteração anterior, tivemos anotações mais consistentes que levaram a uma melhor concordância entre os anotadores.</p>
+<details><summary>Profiling Report</summary>
+
+<iframe width=100% height=500 frameBorder=0 src="../reports/olidbr_pilot_4.html"></iframe>
+
+</details>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Última atualização:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">1 de março de 2023</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Voltar ao topo
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+      
+        
+        <a href="inter-rater-reliability.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Inter-Rater Reliability" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Inter-Rater Reliability
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="qualified-annotators.html" class="md-footer__link md-footer__link--next" aria-label="Próximo: Qualified Annotators" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              Qualified Annotators
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright 2021 Douglas Trajano. Licensed under the Apache License, Version 2.0.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://www.linkedin.com/in/douglas-trajano" target="_blank" rel="noopener" title="Douglas Trajano - LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://dougtrajano.medium.com/" target="_blank" rel="noopener" title="Douglas Trajano - Medium" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://github.com/DougTrajano" target="_blank" rel="noopener" title="DougTrajano - GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.kaggle.com/dougtrajano" target="_blank" rel="noopener" title="Douglas Trajano - Kaggle" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M304.2 501.5 158.4 320.3 298.2 185c2.6-2.7 1.7-10.5-5.3-10.5h-69.2c-3.5 0-7 1.8-10.5 5.3L80.9 313.5V7.5q0-7.5-7.5-7.5H21.5Q14 0 14 7.5v497q0 7.5 7.5 7.5h51.9q7.5 0 7.5-7.5v-109l30.8-29.3 110.5 140.6c3 3.5 6.5 5.3 10.5 5.3h66.9q5.25 0 6-3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "navigation.sections", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.config.lang": "pt", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Buscar", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version.title": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+      
+        <script src="../../javascripts/tables.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+         <loc>https://github.com/DougTrajano/olid-br/data-pipeline.html</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/DougTrajano/olid-br/en/data-pipeline.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://github.com/DougTrajano/olid-br/pt/data-pipeline.html"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/DougTrajano/olid-br/get-started.html</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/DougTrajano/olid-br/en/get-started.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://github.com/DougTrajano/olid-br/pt/get-started.html"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/DougTrajano/olid-br/glossary.html</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/DougTrajano/olid-br/en/glossary.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://github.com/DougTrajano/olid-br/pt/glossary.html"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/DougTrajano/olid-br/index.html</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/DougTrajano/olid-br/en/index.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://github.com/DougTrajano/olid-br/pt/index.html"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/DougTrajano/olid-br/annotation/guidelines.html</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/DougTrajano/olid-br/en/annotation/guidelines.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://github.com/DougTrajano/olid-br/pt/annotation/guidelines.html"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/DougTrajano/olid-br/annotation/index.html</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/DougTrajano/olid-br/en/annotation/index.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://github.com/DougTrajano/olid-br/pt/annotation/index.html"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/DougTrajano/olid-br/annotation/inter-rater-reliability.html</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/DougTrajano/olid-br/en/annotation/inter-rater-reliability.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://github.com/DougTrajano/olid-br/pt/annotation/inter-rater-reliability.html"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/DougTrajano/olid-br/annotation/iterations.html</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/DougTrajano/olid-br/en/annotation/iterations.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://github.com/DougTrajano/olid-br/pt/annotation/iterations.html"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/DougTrajano/olid-br/annotation/qualified-annotators.html</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/DougTrajano/olid-br/en/annotation/qualified-annotators.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://github.com/DougTrajano/olid-br/pt/annotation/qualified-annotators.html"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/DougTrajano/olid-br/annotation/schema.html</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/DougTrajano/olid-br/en/annotation/schema.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://github.com/DougTrajano/olid-br/pt/annotation/schema.html"/>
+         
+    </url>
+</urlset>
