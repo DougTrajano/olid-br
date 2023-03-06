@@ -2,7 +2,7 @@ PyYAML~=6.0
 boto3~=1.24.89
 datasets==2.5.2
 google-cloud-language==2.6.0
-google-cloud-translate==2.0.1
+google-cloud-translate==3.11.0
 google-cloud==0.34.0
 google_api_python_client~=2.64.0
 https://github.com/explosion/spacy-models/releases/download/pt_core_news_lg-3.4.0/pt_core_news_lg-3.4.0.tar.gz
